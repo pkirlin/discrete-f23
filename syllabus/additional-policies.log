@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.8)  23 AUG 2022 15:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.8)  6 JAN 2023 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**additional-policies.tex syllabus-142-f21.tex syllabus-142-f22.tex
+**additional-policies.tex
 (./additional-policies.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-07-04>
@@ -244,7 +244,7 @@ File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box53
 )
-No file additional-policies.aux.
+(./additional-policies.aux)
 \openout1 = `additional-policies.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -266,35 +266,31 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 Package hyperref Info: Link coloring OFF on input line 7.
+ (./additional-policies.out)
+(./additional-policies.out)
 \@outlinefile=\write3
 \openout3 = `additional-policies.out'.
 
-[1
+ [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] (./additional-policies.aux)
-
-Package rerunfilecheck Warning: File `additional-policies.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `additional-policies.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
+additional-policies.aux)
+Package rerunfilecheck Info: File `additional-policies.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 7985 strings out of 478024
- 126423 string characters out of 5838704
- 438156 words of memory out of 5000000
- 26388 multiletter control sequences out of 15000+600000
+ 7992 strings out of 478024
+ 126582 string characters out of 5838704
+ 438333 words of memory out of 5000000
+ 26389 multiletter control sequences out of 15000+600000
  470333 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,5n,77p,1322b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,5n,77p,1280b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on additional-policies.pdf (2 pages, 67247 bytes).
+Output written on additional-policies.pdf (2 pages, 67533 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream
