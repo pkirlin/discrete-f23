@@ -11,3 +11,9 @@ Tue, Jan 17
 
 Thu, Jan 19
 : **Linear regression**  
+
+Tue, Jan 24
+: **Linear regression, continued**  
+
+Tue, Jan 26
+: **TBA**  
