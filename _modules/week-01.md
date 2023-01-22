@@ -8,9 +8,11 @@ Thu, Jan 12
 
 Tue, Jan 17
 : **Machine learning concepts, start linear regression**  
+  Notebooks: `linear-regression-1`
 
 Thu, Jan 19
 : **Linear regression**  
+  Notebooks: `linear-regression-1`, `cost-function-intuition`
 
 Tue, Jan 24
 : **Linear regression, continued**  
