@@ -16,6 +16,8 @@ Thu, Jan 19
 
 Tue, Jan 24
 : **Linear regression, continued**  
-
+  Gradient descent, started lab  
+  Notebooks: `linear-regression-2`
+  
 Tue, Jan 26
 : **TBA**  
