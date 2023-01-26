@@ -21,5 +21,5 @@ Tue, Jan 24
   
 Thu, Jan 26
 : **Finish linear regression**  
-  Finish lab, multivariate linear regression 
+  Finish lab, multivariate linear regression  
   Notebooks:  `linear-regression-lab`, `linear-regression-3`
