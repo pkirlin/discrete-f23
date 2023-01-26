@@ -17,7 +17,9 @@ Thu, Jan 19
 Tue, Jan 24
 : **Linear regression, continued**  
   Gradient descent, started lab  
-  Notebooks: `linear-regression-2`
+  Notebooks: `linear-regression-2`, `linear-regression-lab`
   
-Tue, Jan 26
-: **TBA**  
+Thu, Jan 26
+: **Finish linear regression**  
+  Finish lab, multivariate linear regression 
+  Notebooks:  `linear-regression-lab`, `linear-regression-3`
