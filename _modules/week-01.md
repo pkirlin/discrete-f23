@@ -23,3 +23,11 @@ Thu, Jan 26
 : **Finish linear regression**  
   Finish lab, multivariate linear regression  
   Notebooks:  `linear-regression-lab`, `linear-regression-3`
+  
+Tue, Jan 31
+: **Class canceled, ice**
+
+Thu, Feb 2
+: **Machine learning with matrices and numpy**
+  Notebooks: `linear-regression-3`, `numpy-lab`
+
