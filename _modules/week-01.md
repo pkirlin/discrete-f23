@@ -28,6 +28,6 @@ Tue, Jan 31
 : **Class canceled, ice**
 
 Thu, Feb 2
-: **Machine learning with matrices and numpy**
+: **Machine learning with matrices and numpy**  
   Notebooks: `linear-regression-3`, `numpy-lab`
 
