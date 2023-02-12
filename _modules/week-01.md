@@ -28,6 +28,17 @@ Tue, Jan 31
 : **Class canceled, ice**
 
 Thu, Feb 2
-: **Machine learning with matrices and numpy**  
-  Notebooks: `linear-regression-3`, `numpy-lab`
+: **Class canceled, ice**
 
+Tue, Feb 7
+: **Machine learning with matrices and numpy, start logistic regression**  
+  Notebooks: `linear-regression-3`, `numpy-lab`, `logistic-regression-1`
+
+Thu, Feb 9
+: **Finish logistic regression**  
+  Notebooks: `logistic-regression-2`
+
+Tue, Feb 14
+: **Regularization**
+
+Thu, Feb 16
