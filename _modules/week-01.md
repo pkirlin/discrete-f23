@@ -23,6 +23,7 @@ Thu, Jan 26
 : **Finish linear regression**  
   Finish lab, multivariate linear regression  
   Notebooks:  `linear-regression-lab`, `linear-regression-3`
+: **Project**{: .label .label-proj } **Project 1** (due Mon, Feb 13)
   
 Tue, Jan 31
 : **Class canceled, ice**
