@@ -45,3 +45,10 @@ Tue, Feb 14
 
 Thu, Feb 16
 : **Finish multinomial logistic regression**
+
+Tue, Feb 21
+: **Neural networks, forward propogation**  
+  Notebooks: `nn-1`
+
+Thu, Feb 23
+: **Backward propogation**  
