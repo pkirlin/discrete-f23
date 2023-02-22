@@ -45,10 +45,11 @@ Tue, Feb 14
 
 Thu, Feb 16
 : **Finish multinomial logistic regression**
+: **Project**{: .label .label-proj } **Project 2** (due Thu, Feb 23)
 
 Tue, Feb 21
-: **Neural networks, forward propogation**  
+: **Neural networks, forward propagation**  
   Notebooks: `nn-1`
 
 Thu, Feb 23
-: **Backward propogation**  
+: **Backward propagation**  
