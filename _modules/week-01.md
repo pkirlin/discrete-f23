@@ -40,7 +40,7 @@ Thu, Feb 9
   Notebooks: `logistic-regression-2`
 
 Tue, Feb 14
-: **Regularization, start multinomial logistic regression**
+: **Regularization, start multinomial logistic regression**  
   Notebooks: `regularization`, `logistic-regression-3`
 
 Thu, Feb 16
