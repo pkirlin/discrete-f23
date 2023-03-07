@@ -52,4 +52,16 @@ Tue, Feb 21
   Notebooks: `nn-1`
 
 Thu, Feb 23
-: **Backward propagation**  
+: **More neural nets, forward propagation demo, and exam review**  
+
+Tue, Feb 28
+: **Exam 1**  
+
+Thu, Mar 2
+: **Convolutional neural nets**  
+
+Tue, Mar 7
+: **Backprop 1**  
+
+Thu, Mar 9
+: **Backprop 2**  
