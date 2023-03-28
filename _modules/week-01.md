@@ -65,3 +65,23 @@ Tue, Mar 7
 
 Thu, Mar 9
 : **Backprop 2**  
+
+Tue, Mar 14
+: **Spring break**  
+
+Thu, Mar 16
+: **Spring break**  
+
+Tue, Mar 21
+: **Decision trees 1**
+: **Project**{: .label .label-proj } **Project 3** (due Tue, Mar 28)
+
+Thu, Mar 23
+: **Decision trees 2**  
+
+Tue, Mar 28
+: **Finish decision trees, k nearest neighbors**  
+
+Thu, Mar 30
+: **k means**  
+
