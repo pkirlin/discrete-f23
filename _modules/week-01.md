@@ -74,7 +74,7 @@ Thu, Mar 16
 
 Tue, Mar 21
 : **Decision trees 1**
-: **Project**{: .label .label-proj } **Project 3** (due Tue, Mar 28)
+: **Project**{: .label .label-proj } **Project 2.5** (due Tue, Mar 28)
 
 Thu, Mar 23
 : **Decision trees 2**  
@@ -102,6 +102,7 @@ Tue, Apr 18
 
 Thu, Apr 20
 : **Workday**  
+: **Project**{: .label .label-proj } **Project 3** (due Tue, May 2)
 
 Tue, Apr 25
 : **Workday**  
