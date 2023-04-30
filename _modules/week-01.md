@@ -85,3 +85,26 @@ Tue, Mar 28
 Thu, Mar 30
 : **k means**  
 
+Tue, Apr 4
+: **k nearest neighbors**  
+
+Thu, Apr 6
+: **Easter break** 
+ 
+Tue, Apr 11
+: **Anomaly detection**  
+
+Thu, Apr 13
+: **Review**  
+
+Tue, Apr 18
+: **Exam 2**  
+
+Thu, Apr 20
+: **Workday**  
+
+Tue, Apr 25
+: **Workday**  
+
+Thu, Apr 27
+: **Presentations**  
