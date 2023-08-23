@@ -22,7 +22,7 @@ seo:
 - Instructor: Phillip Kirlin
 - Office hours: TBA.  Also available by appointment and over Slack.
 - [Canvas page](https://rhodes.instructure.com/courses/5968): Use for grades, online assignment submissions, and assignment solutions.
-- [Syllabus](syllabus/syllabus-discrete-f23.pdf) and [additional policies](syllabus/additional-policies.pdf).
+- [Syllabus](syllabus/syllabus-172-f23.pdf) and [additional policies](syllabus/additional-policies.pdf).
 
 ## Resources
      
