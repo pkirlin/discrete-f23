@@ -17,7 +17,7 @@ title: CS 172
 tagline: "CS 172: Discrete Structures"
 description: Fall 2023
 author: Phil Kirlin
-baseurl: '/discrete-s23' # the subpath of your site, e.g. /blog
+baseurl: '/discrete-f23' # the subpath of your site, e.g. /blog
 url: 'https://pkirlin.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
