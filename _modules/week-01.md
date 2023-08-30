@@ -13,3 +13,7 @@ Fri, Aug 25
 Mon, Aug 28
 : **Conditional statements**  
   Read Section 2.2
+  
+Wed, Aug 30
+: **Valid and invalid arguments**  
+  Read Section 2.3

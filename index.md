@@ -25,6 +25,8 @@ seo:
 - [Syllabus](syllabus/syllabus-172-f23.pdf) and [additional policies](syllabus/additional-policies.pdf).
 
 ## Resources
+
+- [Logic reference sheet](https://www.cs.rhodes.edu/~kirlinp/courses/discrete/f17/handouts/cheatsheet.pdf)
      
 
 ## Calendar
