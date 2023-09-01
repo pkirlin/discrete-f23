@@ -23,4 +23,4 @@ Fri, Sep 1
 : **Proving valid arguments**  
 
 Mon, Sep 4
-: **Labor Day**
+: **<i>Labor Day</i>**
