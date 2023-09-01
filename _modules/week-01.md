@@ -13,7 +13,7 @@ Fri, Aug 25
 Mon, Aug 28
 : **Conditional statements**  
   Read Section 2.2  
-  [Homework 1](homework/hw1.pdf), due Wed, Sep 6 in class
+  [Homework 1](homework/hw1.pdf), due Wed, Sep 6 in class.
   
 Wed, Aug 30
 : **Valid and invalid arguments**  
