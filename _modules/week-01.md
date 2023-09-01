@@ -12,9 +12,15 @@ Fri, Aug 25
 
 Mon, Aug 28
 : **Conditional statements**  
-  Read Section 2.2
-  [Homework 1](hw/hw1.pdf)
+  Read Section 2.2  
+  [Homework 1](homework/hw1.pdf)
   
 Wed, Aug 30
 : **Valid and invalid arguments**  
   Read Section 2.3
+  
+Fri, Sep 1
+: **Proving valid arguments**  
+
+Mon, Sep 4
+: **Labor Day**
