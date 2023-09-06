@@ -1,0 +1,345 @@
+\documentclass[11pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\powerset}[1]{\mathcal P \left({#1}\right)}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 12 Solutions}}
+
+\vspace*{.1in}
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\medskip
+
+\textbf{For any problem that requires a numerical answer (as opposed to a proof or something written in words), unless otherwise specified, you do not need to fully reduce your
+answer to a single number --- you may leave it in a form that uses addition, subtraction, multiplication, division, permutations (i.e., $P(n,k)$ notation)
+and combinations (i.e., $\binom{n}{k}$ notation).}
+
+\medskip
+
+\textbf{Show your work for these problems! If you make a calculation error, it is easier to give partial credit if you illustrate how you derived your answer.}
+
+\begin{enumerate}
+
+\item Recall that in a standard deck of 52 playing cards, each card has both a \emph{suit}
+and a \emph{rank}.  There are four suits, called \emph{clubs, diamonds, hearts,} and \emph{spades}.
+There are thirteen ranks.  Nine of those ranks are named by the numbers 2 through 10.
+The remaining four ranks are called \emph{jack, queen, king}, and \emph{ace}.  
+
+
+In the poker variant of Texas Hold'em, there are multiple betting rounds.  In the first round, each player is dealt two playing cards at random 
+from a standard deck of 52 cards.  For these problems, the order of the cards doesn't matter.
+\begin{enumerate}
+	     \item If you are dealt two cards at random from a standard deck of 52 cards, how many possible ways can this be done?  That is, how many possible two-card hands
+        are there?
+        
+        \textbf{Solution:} $\binom{52}{2}$
+        
+        \item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your two cards are both face cards?  (Face cards are
+        jacks, queens, and kings.  The two cards don't have to be the same face card.)
+        
+        
+        \textbf{Solution:} There are four different suits, and each suit has three face cards,
+        so there are 12 face cards per deck.
+        
+        The probability is $\displaystyle \frac{\displaystyle \binom{12}{2}}{\displaystyle \binom{52}{2}} = 11/221
+        \approx 0.050$
+        
+        \item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability you have a \emph{pocket pair}, meaning the two
+        cards are of the same rank?  (e.g., both queens, both fives, both aces, etc)
+        
+                \textbf{Solution:}
+        
+        \emph{Method 1:}
+                
+        Pick the rank of the cards = $\binom{13}{1} = 13$ ways to do this.
+        
+        Pick two cards from the 4 of that suit = $\binom{4}{2}$ to do this.
+        
+        The probability is $\displaystyle \frac{\displaystyle \binom{13}{1}\binom{4}{2}}{\displaystyle \binom{52}{2}} = 1/17
+        \approx 0.0588$
+        
+        \emph{Method 2:}
+        
+        Assume you have picked one card.  Calculate the probability that the second card matches
+        the first card in rank.  There are 51 cards left to choose from (denominator), and 
+        3 cards that match the first one in rank.
+        
+        The probability is 3/51 = 1/17.
+        
+        \emph{Method 3:}
+        
+        You can do this problem with order mattering, as long as you change both the numerator
+        and denominator.  Note: this only works for probability problems; it would be incorrect
+        to say the answer to part (a) is $52\cdot 51$, because order does not matter when
+        just counting the hands.  When you do a probability problem, you can often introduce
+        order in both the numerator and denominator because the extra factors will cancel each
+        other out.
+        
+        Numerator: ways to pick first card = 52; ways to pick second card that matches in rank
+         = 3.  So the numerator is $52 \cdot 3$.
+         
+        Denominator: ways to pick first card = 52; ways to pick second card = 51.  Denominator
+        = $52\cdot 51$.
+        
+        The probability is $(52\cdot 3)/(52 \cdot 51) = 1/17.$
+        
+        \item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your hand is \emph{suited}, meaning the two cards
+        are of the same suit?  (e.g., both diamonds, both clubs, etc)
+        
+                \textbf{Solution:}
+        
+        \emph{Method 1:}
+                
+        Pick the suit of the cards = $\binom{4}{1} = 4$ ways to do this.
+        
+        Pick two cards from the 13 of that suit = $\binom{13}{2}$ to do this.
+        
+        The probability is $\displaystyle \frac{\displaystyle \binom{4}{1}\binom{13}{2}}{\displaystyle \binom{52}{2}} = 4/17
+        \approx 0.235$
+        
+        \emph{Method 2:}
+        
+        Assume you have picked one card.  Calculate the probability that the second card matches
+        the first card in suit.  There are 51 cards left to choose from (denominator), and 
+        12 cards that match the first one in rank.
+        
+        The probability is 12/51 = 4/17.
+        
+        \emph{Method 3:}
+        
+        Numerator: ways to pick first card = 52; ways to pick second card that matches in rank
+         = 12.  So the numerator is $52 \cdot 12$.
+         
+        Denominator: ways to pick first card = 52; ways to pick second card = 51.  Denominator
+        = $52\cdot 51$.
+        
+        The probability is $(52\cdot 12)/(52 \cdot 51) = 1/17.$
+        
+        \item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your two cards match in rank and suit?
+        
+        \textbf{Solution:}
+        
+        There is no way for the two cards to match in both rank and suit, because each card
+        in a deck is unique and you drawing two cards at once; they must differ in either
+        the rank or the suit.  The probability is zero.
+        
+        \item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your two cards have different ranks and different suits?
+        
+                \textbf{Solution:}
+                
+        \emph{Method 1:} 
+        
+        Numerator: ways to pick two cards without order with differing ranks and suits.
+        First, pick two different ranks = $\binom{13}{2}$.  Second, pick a suit for the first
+        rank = 4 ways.  Third, pick a suit for the second rank = 3 ways, since it cannot match
+        the first suit.
+        
+        Numerator = $\binom{13}{2}\cdot 4 \cdot 3$.
+        
+        \emph{Note:} This is not the same as $\binom{13}{2}\binom{4}{2}$.  We can't use
+        $\binom{4}{2}$ because that implies a hand of the king of hearts and the ace of spades
+        is the same hand as the ace of hearts and the king of spaces.  In other words, once we
+        pick the two ranks, we must use order to pick the suits = $P(4,2)=4\cdot 3$.
+        
+        Denominator = $\binom{52}{2}$.
+        
+        The probability is $\dfrac{\displaystyle \binom{13}{2}\cdot 4 \cdot 3}{\displaystyle \binom{52}{2}} = 12/17 = 0.706.$
+        
+        \emph{Method 2:} Use the difference rule.
+        
+        Another way to solve this is to start with all possible two-card hands, then remove
+        those that match in rank, then remove those that match in suit.  (Note, this only works
+        because there are no hands that match in rank and suit.  If there were, then the 
+        procedure we just described would double-remove them.)
+        
+        Total hands = $\binom{52}{2}$.
+        
+        Matching ranks = $\binom{13}{1}\binom{4}{2}$.
+        
+        Matching suits = $\binom{4}{1}\binom{13}{2}$.
+        
+        The probability is $\dfrac{\binom{52}{2} - \binom{13}{1}\binom{4}{2} - \binom{4}{1}\binom{13}{2}}{\binom{52}{2}} = 12/17$.
+        
+        
+        \end{enumerate}
+	
+	%\end{enumerate}
+
+
+
+
+\item Rhodes is going to send a group of computer science majors to a local high school
+to talk to the high schoolers about how cool CS is.  
+\begin{enumerate}
+        \item There are 20 CS majors.  How many ways can a group of 5 be picked to visit the 
+        school?
+        
+           \textbf{Answer:} $\displaystyle \binom{20}{5} = \frac{20!}{5! \cdot 15!}$.
+
+     
+        
+        \item The 20 CS majors consist of 12 first/second-year students and 8 third/fourth-year students.
+        The group of 5 to visit the school should consist of at least one first/second-year student
+        and at least one third/fourth-year student.  How many ways can the group be picked?
+        
+        Hint: Use the difference rule or the addition rule.
+        
+\textbf{Answer:}
+        
+        Method 1:
+        
+        Add up the number of ways to have 1 lowerclassman/4 upperclassmen, 2 lower/3 upper, 3/2,
+        and 4/1:
+        
+        $\displaystyle \binom{12}{1}\binom{8}{4}
+        +\binom{12}{2}\binom{8}{3} 
+        +\binom{12}{3}\binom{8}{2}
+        +\binom{12}{4}\binom{8}{1} \\= 
+        \frac{12!}{1! \cdot 11!}\cdot\frac{8!}{4! \cdot 4!}+
+        \frac{12!}{2! \cdot 10!}\cdot\frac{8!}{3! \cdot 5!}+
+        \frac{12!}{3! \cdot 9!}\cdot\frac{8!}{2! \cdot 6!}+
+        \frac{12!}{4! \cdot 8!}\cdot\frac{8!}{1! \cdot 7!}$
+        
+        Method 2:
+        
+        Figure out the total number of ways to choose any group (part A).  Now subtract
+        out the ways to have all upper or all lower:
+        
+        $\displaystyle \binom{20}{5} - \binom{12}{5} - \binom{8}{5}$.
+        
+        Both of these methods yield the same result: 14656.
+        
+        \item A group of 5 is picked at random (not following the guidelines from part (b)).  What is the probability it consists of all first/second-years or all third/fourth years?
+ 
+ 
+  \textbf{Answer:}
+        
+        $\displaystyle P(Event) = N(Event)/N(Sample\ space) = \dfrac{\displaystyle \binom{12}{5} + \binom{8}{5}}{\displaystyle \binom{20}{5}}
+        = \dfrac{\dfrac{12!}{5! \cdot 7!} + \dfrac{8!}{5! \cdot 3!}}{\dfrac{20!}{5! \cdot 15!}}$.
+        
+        $=53/969 \approx 0.055$.
+ 
+
+
+
+        \item Two other high schools get on board and want a group of 5 CS majors to visit.
+        So now you need to pick 3 groups of 5 students each to send to the three schools.  How many ways can this be done?  (Class years don't matter for this problem.)
+        
+   
+
+        Note that it matters which group goes to which school, but within each group, the ordering
+        of the students doesn't matter. 
+        
+        Hint: Call the schools A, B, and C.  First, pick the students to visit school A.
+        Then pick the students to visit school B.  Then pick the students to visit school C.
+        
+         \textbf{Answer:}
+        
+        $\displaystyle \binom{20}{5}\binom{15}{5}\binom{10}{5} = \dfrac{20!}{(5!)^4}=11,732,745,024$
+        
+        
+        
+\end{enumerate}
+
+
+\item For this problem, assume Rhodes College has 2000 students.
+\begin{enumerate}
+	\item Is is guaranteed that among the Rhodes students, there are two students
+	who share the same combination of initials of their first and last names?  (For instance,
+	John Smith's initials are ``JS''.) Mathematically, explain why or why not.
+	
+	 \textbf{Answer:} Create two sets, $X$ = the set of all students, and $Y$ = the set of all combinations of
+        first and last initials.  Size of $X$ = 2000.  Size of $Y$ = $26\cdot 26=676$.
+        
+        By the pigeonhole principle, any function from $X$ to $Y$ cannot be 1-1.  So when we assign
+        students to their corresponding initials, there must be two students who are mapped to the
+        same initials.  In other words, (at least) two students on campus \emph{must} have the same initials.
+        
+
+	
+	
+	
+	\item Is it guaranteed that among the Rhodes students, there are three students
+	who share the same initials?  How about four students?  Mathematically, explain why or why not for each
+	case.
+	
+	
+	\textbf{Answer:} Assume we have the same sets $X$ and $Y$ as in the previous part.
+        
+        By the pigeonhole principle, if the inequality $n > k\cdot m$ is true, with the size of set $X$
+        being $n$ and the size of $Y$ being $m$, then there must be $k+1$
+        pigeons in $X$ that end up in a single pigeonhole in $Y$.  So if we want to know if there are three
+        students with the same initials, we use $k=2$.  The inequality $2000 > 2 \cdot 676$ is true, so 
+        there \emph{are} three students who share the same initials.
+        
+        The case for 4 is not true however.  The inequality $2000 > 3\cdot 676$ is false (because $3\cdot 676=2028$) and so we cannot say (for sure) that four students share initials.  There is a possibility
+        of this happening, but the pigeonhole principle can only be used for a guarantee, and we don't
+        meet the conditions to have the guarantee.
+        
+
+	
+	
+	\vspace{.1in}
+	
+	 \emph{The next three questions are all related.}
+	 
+	 \vspace{.1in}
+	
+	\item Suppose the Rat owns owns 500 forks and 500 spoons.  Every time a student comes into the Rat to eat a meal, they always select (at random) one fork and one spoon to eat
+	with.  
+	
+	How many possible ways can a fork-and-spoon pair be chosen?  (Ignore any issues of some forks or spoons being unavailable because other students are already using them.)
+	
+	\textbf{Answer:}  $500 \cdot 500=250,000$ ways.
+	
+	\item By the pigeonhole principle, how many meals must the Rat serve to guarantee that the exact same fork-and-spoon pair was chosen twice?  (Assume ``meal'' means one student eating
+a meal, not all students eating a meal.  This question is not supposed to be tricky.)
+
+\textbf{Answer:} The Rat must serve at least $250,001$ meals.  Any smaller than that, and there's a chance that every student picked up a different fork/spoon pairing.  Once you get
+above $250,000$, there must be a pair that was used twice.
+	
+	\item Now assume that all 2000 students eat every meal in the Rat.  (That is, each student eats three meals per day there.)  
+	
+	What is the minimum number of days that the Rat has to serve meals
+	to guarantee that the same fork-and-spoon pair was chosen twice? 	\emph{Your answer should be an integer.}
+	Explain mathematically.
+	
+	\textbf{Answer:} We must figure out on what day the $250,001$st meal was served.  $2000$ students eat three meals per day; that is $6000$ meals served every day.  After day 1,
+	6000 meals have been served; after day 2, 12000 meals, and so on.  If we divide $250,0001$ by $6000$, we come up with a number between 41 and 42.  Therefore, some time during
+	day 42, the $250,001$st meal will be served.  So the answer is 42 days.
+	
+\end{enumerate}
+\item Suppose I pick three integers arbitrarily.  Use the pigeonhole principle to explain why among those three
+integers,
+there must be a pair of integers whose difference is even.  (You may state whatever
+facts you want about even or odd numbers without proof, as long as your statements
+are true.)
+
+\textbf{Solution:}  Among any set of three integers, either two of them must be even, or
+two of them must be odd.  This can be determined from the pigeonhole principle: there
+are three integers and two properties (even and odd), so any function that maps the integers
+to even/odd must assign two of them to the same property.  
+
+So now we now two of the integers are even or two are odd.  We also know that the difference
+of two even integers is even, and the difference of two odd integers is also even (we state
+these facts without proof, though they are straightforward to prove).  Therefore, in 
+either case, there is a pair of integers whose difference is even.
+
+
+
+
+
+
+\end{enumerate}
+\end{document}

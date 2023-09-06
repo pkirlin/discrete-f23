@@ -1,0 +1,125 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 4}}
+
+\medbreak
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+\item Consider the following statement:
+$$\exists x \in \Z \ x^2=4$$
+Which of the following are correct translations of this statement?  \textbf{Write down all the letters which are correct.}
+Note that some of the sentences below may be factually correct, but not correct translations of the original statement.
+\begin{enumerate}
+        \item The square of each integer is 4.
+        \item Some integers have squares of 4.
+        \item The number $x$, when squared, is equal to 4, for some integer $x$.
+        \item If $x$ is an integer, then $x^2=4$.  (Hint: read page 70.)
+        \item Some integer has a square of 4.
+        \item There is at least one integer whose square is 4.
+\end{enumerate}
+
+\item Consider the following statement:
+$$\forall n \in \Z \ \text{Even}(n) \to \text{Even}(n^2)$$
+(You may interpret Even($x$) to mean ``$x$ is an even number.'')
+
+Which of the following are correct translations of this statement?  \textbf{Write down all the letters which are correct.}
+Note that some of the sentences below may be factually correct, but not correct translations of the original statement.
+\begin{enumerate}
+        \item All integers are even and have even squares.
+        \item Given any integer that is even, the square of that integer is also even.
+        \item For all integers, there are some whose square is even.
+        \item Any integer that is even has an even square.
+        \item If an integer is even, then its square is even.
+        \item All even integers have even squares.
+\end{enumerate}
+
+               
+               
+               \newpage
+        \item Let $E(x,y)$ mean ``person $x$ enjoys class $y$,'' let $S$ be the set of
+        all students, and let $C$ be the set of all computer science classes.
+        
+        Translate each of the following into English statements.  Make your sentences as natural-sounding
+        as possible, while still being precise in meaning.
+        
+        \begin{enumerate}
+                \item $\forall x \in S \  \forall y \in C \  E(x, y)$
+                \item $\exists x \in S \  \exists y \in C \  E(x, y)$
+                \item $\forall x \in S \  \exists y \in C \  E(x, y)$
+                \item $\exists x \in S \  \forall y \in C \  E(x, y)$
+                \item $\forall y \in C \  \exists x \in S \  E(x, y)$
+                \item $\exists y \in C \  \forall x \in S \  E(x, y)$
+                
+        \end{enumerate}
+
+\item Complete the following proofs using the method described in class (line numbers, 
+rule justifications, etc).
+
+\begin{enumerate}
+
+\item P1: $\exists w \in D \ \nott M(w) \to N(w)$ \\
+        P2: $\forall x \in D \ \nott M(x) \lor R(x)$ \\
+        P3: $\forall y \in D \ \nott N(y) \to \nott R(y)$ \\
+        Prove: $\exists z \in D \ N(z)$
+        
+\item P1: $\forall w \in D \ \nott R(w) \land Q(w)$ \\
+        P2: $\forall x \in D \ Q(x) \to \nott (P(x) \land S(x))$ \\
+        P3: $\forall y \in D \ (T(y) \to R(y)) \to P(y)$ \\
+        Prove: $\forall z \in D \ S(z) \to T(z)$
+        
+\item P1: $\forall w \in D \ \nott B(w)$ \\
+        P2: $\forall x \in D \ Q(x) \to (R(x) \land T(x))$ \\
+        P3: $\forall y \in D \ [B(y) \to \nott Q(y)] \to [R(y) \to B(y)]$ \\
+        Prove: $\forall z \in D \ \nott Q(z)$
+
+\end{enumerate}
+
+\newpage
+
+\item In this problem, you are given a number of statements in English about people and musical instruments.
+You are also given a number of statements in predicate logic.  For each of the English statements, you must
+decide which predicate logic statements are true for the English statement in question.
+
+Here are the predicate logic statements you can pick from:
+
+Let $L$ be the set of people ``Kate, Lisa, John;'' let $M$ be the set of musical instruments ``piano, trumpet, accordion;'' and 
+let the predicate $P(x,y)$ mean ``person $x$ plays instrument $y$.''
+
+\begin{enumerate}
+        \item[1.]  $\forall x \in L \ \exists y \in M \ P(x, y)$
+        \item[2.]  $\exists x \in L \ \forall y \in M \ P(x, y)$
+        \item[3.]  $\forall y \in M \ \exists x \in L \ P(x, y)$
+        \item[4.]  $\exists y \in M \ \forall x \in L \ P(x, y)$
+\end{enumerate}
+
+You may assume that in each situation, each person plays only the instruments listed for him or her, and no others. In other words, if its not listed, they don't play it!
+
+Here are the English statements.  For each statement, write down the corresponding numbers of all the predicate logic statements above that are true for the
+English statement.
+
+\begin{enumerate}
+\item John plays piano, Kate plays trumpet, and Lisa plays accordian.
+\item John plays piano, Kate plays piano and trumpet, and Lisa plays piano and accordian.
+\item John plays trumpet, Kate plays piano, trumpet, and accordian, and Lisa doesn't play anything.
+\item John plays trumpet, Kate plays piano and trumpet, and Lisa plays trumpet.
+\item John plays trumpet, Kate doesn't play anything, and Lisa plays piano and accordian.
+\item John plays accordian, Kate plays piano and accordian, and Lisa plays piano.
+\item John plays piano, trumpet, and accordian, Kate plays trumpet and accordian, and Lisa plays accordian.
+\item John plays piano and trumpet, Kate plays piano and accordian, and Lisa plays piano, trumpet, and accordian.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

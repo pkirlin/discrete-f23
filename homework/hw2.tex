@@ -1,0 +1,90 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2023, Homework 2}}
+
+\medbreak
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+	\item Construct a complete truth table to help you determine if the following 
+	argument is valid or not. State whether it is valid or not, indicate the critical rows in the truth table, 
+	and explain why those rows support your answer.
+	
+	\begin{tabular}{ll}
+		Premise: & $\nott q \lor (p \land \nott r)$ \\
+		Premise: & $\nott r \to p$ \\
+		Conclusion: & $q \to r$
+	\end{tabular}
+	
+	\item For each of the following, if a \emph{single}, valid rule of inference can lead from the given premises to the given conclusion, state what
+	rule of inference would be used. If no valid rule could be used, write ``no rule.''  Note that you must still write ``no rule'' even if the conclusion follows from the premises but not in one step.
+
+	\begin{enumerate}
+		\item 
+		Premise:  $(m \to p) \lor (n \to p)$ \\
+		Premise:  $n$ \\
+		Conclusion: $p$ \\
+
+		\item 
+		Premise:  $(a \land b) \to (z \lor y)$ \\
+		Premise:  $\nott (z \lor y)$ \\
+		Conclusion: $\nott (a \land b)$  \\
+
+		\item 
+		Premise:  $r \land (q \lor p)$ \\
+		Premise:  $\nott q$ \\
+		Conclusion: $p$  \\
+		
+		\item 
+		Premise:  $k \land m$ \\
+		Conclusion: $(k \land m) \lor (k \to (n \to m))$ \\
+
+		\item 
+		Premise:  $r \land (q \lor p)$ \\
+		Premise:  $\nott q$ \\
+		Conclusion: $r \land p$ \\
+		
+		\item 
+		Premise: $g \to h$\\
+		Premise: $(e \land k) \lor g$ \\
+		Premise: $(e \land k) \to h$ \\
+		Conclusion: $h$
+	\end{enumerate}
+
+\newpage
+	\item Complete the following proofs using the framework discussed in class.  Each line
+	of your proof must be justified with a rule of inference or logical equivalence and appropriate line numbers.
+	
+	\begin{enumerate}
+		\item
+			\begin{tabular}[t]{ll}
+			P1 & $\nott p$ \\ 
+			P2 & $(q \land \nott p) \to m$ \\
+			P3 & $\nott r \lor q$ \\ 
+			P4 & $r$ \\ \hline
+			Prove: & $m$
+		\end{tabular}
+		
+		\item
+			\begin{tabular}[t]{ll}
+			P1 & $\nott k \land g$ \\ 
+			P2 & $m \to \nott g$ \\
+			P3 & $(\nott f \to k) \lor m$ \\ \hline
+			Prove: & $f$
+		\end{tabular}
+	\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

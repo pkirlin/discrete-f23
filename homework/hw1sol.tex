@@ -1,0 +1,152 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx}
+
+\setlength{\parindent}{0em}
+\newcommand{\nott}{{\sim}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\powerset}[1]{\mathcal P \left({#1}\right)}
+\newcommand{\proofnote}[1]{[\textit{Note: #1}]}
+\newcommand{\ans}{\textbf{Answer: }}
+
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 1 Solutions}}
+
+\medbreak
+
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\medbreak
+
+\begin{enumerate}
+
+	\item Convert the following sentences to logical statements using symbols assuming that ``$p$'', ``$b$''
+	and ``$m$'' represent the propositions below.  
+	
+	$p$ = ``Morgan is taking a physics class.'' \\
+	$b$ = ``Morgan is taking a biology class.'' \\
+	$m$ = ``Morgan is taking a math class.''
+	
+	\begin{enumerate}
+		\item Morgan is taking a biology class and a math class, but not a physics class.
+		
+		\ans $b \land m \land \nott p$.
+		
+		\item Morgan is taking a physics class, and either a biology or math class (but not both bio and math).
+		
+		\ans $p \land (b \lor m) \land (\nott b \lor \nott m)$
+		\\ OR \\
+		\ans $p \land [(b \land \nott m) \lor (\nott b \land m)]$
+		
+		\item Morgan is taking a physics class, and either a biology or math class (perhaps both bio and math).
+		
+		\ans $p \land (b \lor m)$.
+		
+		\item If Morgan is taking a biology class, then they are also taking a math class, but if Morgan is not taking a 
+		biology class, then they are taking a physics class.
+		
+		\ans $(b \to m) \land (\nott b \to p)$
+	\end{enumerate}
+
+	\item For each of the sentences below, determine if the sentence is a statement.  If
+	the sentence is a statement, tell whether it is true or false.
+	\begin{enumerate}
+		\item If a tree falls in the forest and no one is around to hear it, does it make a sound?
+		\\ \ans Not a statement; it's a question.
+		\item If $2+2=5$, then I am the very model of a modern major-general.
+		\\ \ans True statement (left side of this implication is clearly false, which means the whole statement is true).
+		\item This statement refers to itself.
+		\\ \ans True statement.
+		\item This statement is false.
+		\\ \ans Not a statement (it's a paradox).
+	\end{enumerate}
+	
+	\item Express the negations of the following statements in normal English sentences.
+	\begin{enumerate}
+		\item Sally is a computer science major and Sally's brother is a math major.
+		\\ \ans Sally is not a CS major or Sally's brother is not a math major.
+		\item Either the professor is late or my watch is fast.
+		\\ \ans The professor is not late and my watch is not fast.
+		\\ \ans OR \ \ The professor is on time (or early) and my watch is accurate (or slow).
+	\end{enumerate}
+	
+	\item For each of the following statements, give the contrapositive, converse, and
+	inverse statements (label them) in normal English, using the syntax ``If \ldots, then \ldots''  
+	You may change verb tenses to improve
+	the grammar.
+	\begin{enumerate}
+		\item ``If you conquer yourself, then you conquer the world.''\footnote{From \emph{Aleph}, by Paulo Coelho.}			
+		\item I will be able to retire if I save enough money.
+		\item You can go to the party only if you get good grades.
+
+		
+	\end{enumerate}
+	
+	\textbf{Solution:} 
+        \begin{enumerate}
+                \item Original statement: If you conquer yourself, then you conquer the world. \\
+                Contrapositive: If you don't conquer the world, then you didn't conquer yourself. \\
+                Converse: If you conquer the world, then you conquer yourself.\\
+                Inverse: If you don't conquer yourself, you won't conquer the world. 
+
+                
+                \item Original statement: I will be able to retire if I save enough money.. \\
+                Equivalent original statement, rephrased: If I save enough money, then I will be able to retire. \\
+                Contrapositive: If I'm not able to retire, then I didn't save enough money. \\
+                Converse: If I'm able to retire, then I saved enough money. \\
+                Inverse: If I don't save enough money, then I won't be able to retire.
+                
+                \item Original statement: You can go to the party only if you get good grades..  \\
+                Equivalent original statement, rephrased: If you don't get good grades, then you can't go to the party. \\
+                Contrapositive: If you go to the party, then you must have gotten good grades.\\
+                Converse: If you don't go to the party, then you didn't get good grades.\\
+                Inverse: If you get good grades, then you can go to the party.
+                
+                \emph{Note:} The statement ``$p$ only if $q$'' means ``if not $q$ then not $p$,'' as well as ``if $p$ then $q$'' (see Epp page 44);
+                clearly $\nott q \to \nott p \equiv p \to q$.  Therefore, it's OK if you switched the original statement and the contrapositive above (because
+                those are logically equivalent to each other) as well as the converse and inverse (the converse and inverse are also always logically equivalent
+                to each other).
+
+        \end{enumerate}
+
+	
+	\item Let $x$, $y$ and $z$ be statements.  Construct a complete truth table\\ for the 
+	statement $(x \to \nott y) \land (\nott x \lor z)$.
+	
+	\begin{tabular}{|l|l|l|l|l|l|l|l|} \hline
+        $x$ & $y$ & $z$ & $\nott y$ & $x \to \nott y$ & $\nott x$ & $\nott x \lor z$ & $(x \to \nott y) \land (\nott x \lor z)$  \\ \hline
+         T & T & T & F & F & F & T & F \\ \hline
+         T & T & F & F & F & F & F & F \\ \hline
+         T & F & T & T & T & F & T & T \\ \hline
+         T & F & F & T & T & F & F & F \\ \hline
+         F & T & T & F & T & T & T & T \\ \hline
+         F & T & F & F & T & T & T & T \\ \hline
+         F & F & T & T & T & T & T & T \\ \hline
+         F & F & F & T & T & T & T & T \\ \hline
+	\end{tabular}
+
+	
+	\item Are the statements $\nott (p \lor q)$ and $\nott p \lor \nott q$ logically equivalent?  Use a complete truth table to justify
+	your answer, and explain (in English) why the truth table supports your answer.
+	
+	\ans No, the statements are not equivalent.
+	
+	\begin{tabular}{|l|l|l|l|l|l|l|} \hline
+        $p$ & $q$ & $p \lor q$ & $\nott (p \lor q)$ & $\nott p$ & $\nott q$ & $\nott p \lor \nott q$   \\ \hline
+         T & T & T & F & F & F & F \\ \hline
+         T & F & T & F & F & T & T \\ \hline
+         F & T & T & F & T & F & T \\ \hline
+         F & F & F & T & T & T & T \\ \hline
+	\end{tabular}
+	
+	The truth table supports the fact that the two statements are not equivalent because the columns for 
+	$\nott (p \lor q)$ and $\nott p \lor \nott q$
+	are different (they disagree on true/false for the two middle rows).
+
+\end{enumerate}
+
+
+\end{document}

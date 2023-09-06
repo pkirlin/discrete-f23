@@ -1,0 +1,68 @@
+\documentclass[11pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\powerset}[1]{\mathcal P\left({#1}\right)}
+
+\begin{document}
+
+\textbf{Discrete Structures, Fall 2017, Homework 10}
+
+\bigskip
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+\item Let $X = \{1,2,3,4,5\}$ and  $Y=\{a,b,c,d,e\}$.  Define $f:X\to Y$ as follows: $f(1)=a$, $f(2)=b$, 
+$f(3)=b$, $f(4)=e$, and $f(5)=d$.
+\begin{enumerate}
+        \item Draw an arrow diagram for $f$.
+        \item Let $A= \{1,2,3\}$, $S=\{a\}$, $T=\{b,c,d\}$, and $W=\{c\}$.  Find $f(A)$, $f(X)$, $f^{-1}(S)$, $f^{-1}(T)$, $f^{-1}(W)$, and $f^{-1}(Y)$.  [Remember that images and pre-images/inverse images are sets!]
+\end{enumerate}
+
+\item Define $f : \R \to \R$ by the rule $f(x) = x^3+1$.  
+\begin{enumerate}
+\item Is $f$ 1-1?  Prove or give a counterexample.
+
+\item Is $f$ onto?  Prove or give a counterexample. 
+\end{enumerate}
+
+
+
+\item Let $A = \{1, 2, 3, 4\}$.  Define a function $f:A \to A$ using an arrow diagram such that
+$f$ is 1-1 and onto, $f$ \textbf{is not} the identity function, but $f \circ f$ \textbf{is} the identity function.
+
+Hint: Draw an arrow diagram with three ovals, each one with the values of $A$ inside.  Draw your arrows,
+ensuring that $f$ is the same function from the first circle to the second, and from the second to the third, and
+has the properties above.
+
+\item Let $X$, $Y$, and $Z$ be any sets.  Suppose $f:X\to Y$ and $g: Y \to Z$ are functions.
+If $g \circ f$ is 1-1, must it be true that $f$ is 1-1?  Prove or give a counter-example.
+
+\item Let $X$, $Y$, and $Z$ be any sets.  Suppose $f:X\to Y$ and $g: Y \to Z$ are functions.
+If $g \circ f$ is 1-1, must it be true that $g$ is 1-1?  Prove or give a counter-example.
+
+\end{enumerate}
+Suggestion/hint/idea for the last two problems: Make up some arrow diagrams first to try to work out if 
+4 and 5 are true or if you should find a counter-example.  Note that an arrow diagram suffices
+for a counter-example (since it defines a function), but in general, an arrow diagram will
+not suffice for universal proof of a function property.
+
+\bigskip
+
+One of the situations in the last two problems is 1-1, and the other is not.  In other words, one of those
+problems will need a proof and one will need a counter-example.
+
+\bigskip
+
+%If you choose to supply a counter-example for the last two problems, you don't have to show that your
+%functions that make up the counter-example are  1-1 or not 1-1; I'll take your word for it.
+\end{document}

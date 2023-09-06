@@ -27,3 +27,7 @@ Mon, Sep 4
 
 Wed, Sep 6
 : **Conditional worlds**  
+
+Fri, Sep 8
+: **More conditional worlds and practice**
+  [Homework 2](homework/hw2.pdf), due Wed, Sep 13 in class.

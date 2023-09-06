@@ -1,0 +1,176 @@
+\documentclass[11pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 8 Solutions}}
+
+\bigskip
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\bigskip
+
+Prove the following statements by strong induction.  Make sure to follow the form from class:
+explicitly define $P(n)$, label the basis step(s), inductive step, where you define the inductive hypothesis, where you define what you want to prove
+and where you use the inductive hypothesis.  
+\begin{enumerate}
+
+\item Suppose we define a sequence as follows: 
+$$
+a_1 = 3; \ a_2 = 5; \text{ and for all integers }i \geq 3, \ a_i = 4a_{i-1} -3a_{i-2}. 
+$$
+Prove $\forall n \in \Z^{\geq 1} \ a_n = 3^{n-1}+2.$
+
+\textbf{Solution:}
+
+Define $P(n)$ as ``$a_n = 3^{n-1}+2.$''  We are trying to prove $\forall n \in \Z^{\geq 1} \ P(n)$.
+
+Base Cases:
+
+Prove $P(1)$ and $P(2)$.  That is, prove that $a_1 = 3^{1-1}+2$ and $a_2 = 3^{2-1}+2$.
+
+LHS = $a_1 = 3$.  RHS = $3^{1-1}+2 = 3^0+2 = 1+2=3$.  LHS = RHS. \ \ \checkmark 
+
+LHS = $a_2 = 5$.  RHS = $3^{2-1}+2 = 3^1+2 = 3+2=5$.  LHS = RHS. \ \ \checkmark 
+
+\textit{(base cases proved)}
+
+Inductive Case:
+
+Suppose $k$ is an arbitrary integer $\geq 2$.
+
+Inductive hypothesis: Assume for all integers $i$, $1 \leq i \leq k$, that $P(i)$ is true.\\
+In other words, assume $P(1) \land P(2) \land P(3) \land \cdots \land P(k)$.\\
+In other words, assume $a_1 = 3^{1-1}+2$ and $a_2 = 3^{2-1}+2$ and $a_3 = 3^{3-1}+2$ and \ldots\ and $a_k = 3^{k-1}+2$.
+
+Inductive step: Prove $P(k+1)$ is true.  In other words, prove that $a_{k+1} = 3^{k+1-1}+2$.
+
+\begin{align*}
+a_{k+1} &= 4a_{k} - 3a_{k-1} &\text{definition of the sequence}\\
+\intertext{By the inductive hypothesis, $P(k-1)$ and $P(k)$ are both true.  Therefore, $a_{k-1} = 3^{k-1-1}+2$ and $a_k = 3^{k-1}+2$.  Substitute these equations into our equation above:}
+a_{k+1} &= 4a_{k} - 3a_{k-1} &\text{from above}\\
+&= 4(3^{k-1}+2) - 3(3^{k-1-1}+2) &\text{substitution}\\
+&= 4\cdot 3^{k-1}+8 - 3\cdot 3^{k-2}-6 &\text{algebra}\\
+&= 4\cdot 3^{k-1}- 3\cdot 3^{k-2}+2 &\text{algebra}\\
+&= 4\cdot 3^{k-1}-  3^{k-1}+2 &\text{algebra}\\
+&= 3\cdot 3^{k-1} +2 = 3^{k}+2 = 3^{k+1-1}+2&\text{algebra}
+\end{align*}
+\textit{[Inductive case proved.]}
+
+\item Suppose we define a sequence as follows: 
+$$
+b_0 = 3; \ b_1 = 1; \ b_2 = 3; \text{ and for all integers }i \geq 3, \ b_i = b_{i-3} + b_{i-2}  +b_{i-1}. 
+$$
+Prove that every term in the sequence is odd.
+
+\textbf{Solution:}
+
+Define $P(n)$ as ``$b_n$ is odd.''  We are trying to prove $\forall n \in \Z^{\geq 0} \ P(n)$.
+
+Base Cases:
+
+Prove $P(0)$, $P(1)$, and $P(2)$.  That is, prove that $b_0$, $b_1$, and $b_2$ are all odd.
+
+$b_0 = 3$.  3 is odd. \ \ \checkmark 
+
+$b_1 = 1$.  1 is odd. \ \ \checkmark 
+
+$b_2 = 3$.  3 is odd. \ \ \checkmark 
+
+\textit{(base cases proved)}
+
+Inductive Case:
+
+Suppose $k$ is an arbitrary integer $\geq 2$.
+
+Inductive hypothesis: Assume for all integers $i$, $0 \leq i \leq k$, that $P(i)$ is true.\\
+In other words, assume $P(0) \land P(1) \land P(2) \land \cdots \land P(k)$.\\
+In other words, assume $b_1$ is odd and $b_2$ is odd and $b_3$ is odd and \ldots and $b_k$ is odd.
+
+Inductive step: Prove $P(k+1)$ is true.  In other words, prove that $b_{k+1}$ is odd.
+
+\textit{[We will prove $b_{k+1}$ is odd using the def'n of odd.  That is, we will try to get an equation that
+looks like $b_{k+1}=2*(some\  integer)+1]$}.
+
+
+\begin{align*}
+b_{k+1} &= b_{k-2} + b_{k-1}  +b_{k} &\text{definition of the sequence}\\
+\intertext{By the inductive hypothesis, $P(k-2)$, $P(k-1)$ and $P(k)$ are all true.  Therefore, $b_{k-2}$, $b_{k-1}$
+and $b_k$ are all odd.}
+\intertext{Therefore, by the definition of odd, there exist integers $p, q, r$ such that $b_{k-2}=2p+1$, $b_{k-1}=2q+1$,
+and $b_{k}=2r+1$.  Let's substitute these in:}
+b_{k+1} &= b_{k-2} + b_{k-1}  +b_{k} &\text{from above}\\
+&= (2p+1) + (2q+1) + (2r+1) &\text{definition of the sequence}\\
+&= 2p+2q+2r+2+1 & \text{algebra}\\
+&= 2(p + q + r + 1) + 1 & \text{algebra}
+\end{align*}
+$p + q + r + 1$ is an integer by closure of the integers under addition.  Therefore, $b_{k+1}$ is odd by the definition of odd.
+\textit{[Inductive case done.]}
+
+\item Suppose we define a sequence as follows: 
+$$
+c_0 = 2; \ c_1=7; \text{ and for all integers }i \geq 2, \ c_i = 3c_{i-1} -2c_{i-2}. 
+$$
+Prove $\forall n \in \Z^{\geq 0} \ 5 \mid (c_n - 2)$.
+
+\textbf{Solution:}
+
+Define $P(n)$ as ``$5\mid (c_n-2)$.''  We are trying to prove $\forall n \in \Z^{\geq 0} \ P(n)$.
+
+Base Cases:
+
+Prove $P(0)$ and $P(1)$.  That is, prove that $5 \mid (c_0-2)$ and $5 \mid (c_1-2)$.
+
+$c_0 -2= 2-2=0$.  $5\mid 0$.  \ \ \checkmark 
+
+$c_1 -2= 7-2=5$.  $5\mid 5$.  \ \ \checkmark 
+
+\textit{(base cases proved)}
+
+Inductive Case:
+
+Suppose $k$ is an arbitrary integer $\geq 1$.
+
+Inductive hypothesis: Assume for all integers $i$, $0 \leq i \leq k$, that $P(i)$ is true.\\
+In other words, assume $P(0) \land P(1) \land P(2) \land \cdots \land P(k)$.\\
+In other words, assume $5 \mid (c_0-2)$ and $5 \mid (c_1-2)$ and $5 \mid (c_2-2)$ and \ldots and $5 \mid (c_k-2)$.
+
+
+
+Inductive step: Prove $P(k+1)$ is true.  In other words, prove that $5\mid (c_{k+1}-2)$.
+
+\textit{[We will prove $5\mid (c_{k+1}-2)$ using the def'n of divides.  That is, we will try to get an equation that
+looks like $c_{k+1}-2=5*(some\  integer)]$}.
+
+\begin{align*}
+c_{k+1} &= 3c_{k} - 2c_{k-1} &\text{definition of the sequence}\\
+\intertext{By the inductive hypothesis, $P(k-1)$ and $P(k)$ are both true.  Therefore, $5\mid (c_{k-1} - 2)$ and $5\mid (c_k-2)$.}
+\intertext{Therefore, by the definition of divides, there exist integers $q,r \in \Z$ such that 
+$(c_{k-1}-2)=5q$ and $(c_k-2)=5r$.}
+\intertext{Let's add 2 to both sides of both equations.  We get $c_{k-1}=5q+2$ and $c_k=5r+2$.   Substitute these into
+our earlier equation:}
+c_{k+1} &= 3c_{k} - 2c_{k-1} = 3(5q+2)-2(5r+2)&\text{substitution}\\
+&= 15q+6-10r-4=5(3q-2r)+2  & \text{all by algebra}
+\intertext{Now subtract 2 from both sides:}
+c_{k+1} -2 &= 5(3q-2r)+2 & \text{algebra}
+\end{align*}
+Because the integers are closed under multiplication and addition, we know $3q-2r \in \Z$.
+Therefore, by the definition of divides, we know $5\mid c_{k+1} -2$.  \textit{[Inductive case done.]}
+
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}

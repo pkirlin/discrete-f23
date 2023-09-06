@@ -1,0 +1,130 @@
+\documentclass[11pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\powerset}[1]{\mathcal P \left({#1}\right)}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 12}}
+
+\vspace*{.1in}
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\medskip
+
+\textbf{For any problem that requires a numerical answer (as opposed to a proof or something written in words), unless otherwise specified, you do not need to fully reduce your
+answer to a single number --- you may leave it in a form that uses addition, subtraction, multiplication, division, permutations (i.e., $P(n,k)$ notation)
+and combinations (i.e., $\binom{n}{k}$ notation).}
+
+\medskip
+
+\textbf{Show your work for these problems! If you make a calculation error, it is easier to give partial credit if you illustrate how you derived your answer.}
+
+\begin{enumerate}
+
+\item Recall that in a standard deck of 52 playing cards, each card has both a \emph{suit}
+and a \emph{rank}.  There are four suits, called \emph{clubs, diamonds, hearts,} and \emph{spades}.
+There are thirteen ranks.  Nine of those ranks are named by the numbers 2 through 10.
+The remaining four ranks are called \emph{jack, queen, king}, and \emph{ace}.  
+
+
+In the poker variant of Texas Hold'em, there are multiple betting rounds.  In the first round, each player is dealt two playing cards at random 
+from a standard deck of 52 cards.  For these problems, the order of the cards doesn't matter.
+\begin{enumerate}
+	\item If you are dealt two cards at random from a standard deck of 52 cards, how many possible ways can this be done?  That is, how many possible two-card hands
+	are there?
+	\item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your two cards are both face cards?  (Face cards are
+	jacks, queens, and kings.  The two cards don't have to be the same face card.)
+	\item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability you have a \emph{pocket pair}, meaning the two
+	cards are of the same rank?  (e.g., two queens, two fives, two aces, etc)
+	\item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your hand is \emph{suited}, meaning the two cards
+	are of the same suit?  (e.g., two diamonds, two clubs, etc)
+	\item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your two cards match in rank \emph{and} suit?
+	\item If you are dealt two cards at random from a standard deck of 52 cards, what is the probability your two cards have different ranks \emph{and} different suits?
+	
+	
+	
+	\end{enumerate}
+
+
+
+
+\item Rhodes is going to send a group of computer science majors to a local high school
+to talk to the high schoolers about how cool CS is.  
+\begin{enumerate}
+        \item There are 20 CS majors.  How many ways can a group of 5 be picked to visit the 
+        school?
+        
+        
+        
+        \item The 20 CS majors consist of 12 first/second-year students and 8 third/fourth-year students.
+        The group of 5 to visit the school should consist of at least one first/second-year student
+        and at least one third/fourth-year student.  How many ways can the group be picked?
+        
+        Hint: Use the difference rule or the addition rule.
+        
+
+        
+        \item A group of 5 is picked at random (not following the guidelines from part (b)).  What is the probability it consists of all first/second-years or all third/fourth years?
+ 
+
+        \item Two other high schools get on board and want a group of 5 CS majors to visit.
+        So now you need to pick 3 groups of 5 students each to send to the three schools.  How many ways can this be done?  (Class years don't matter for this problem.)
+
+        Note that it matters which group goes to which school, but within each group, the ordering
+        of the students doesn't matter. 
+        
+        Hint: Call the schools A, B, and C.  First, pick the students to visit school A.
+        Then pick the students to visit school B.  Then pick the students to visit school C.
+\end{enumerate}
+
+
+\item For this problem, assume Rhodes College has 2000 students.
+\begin{enumerate}
+	\item Is is guaranteed that among the Rhodes students, there are two students
+	who share the same combination of initials of their first and last names?  (For instance,
+	John Smith's initials are ``JS''.) Mathematically, explain why or why not.
+	\item Is it guaranteed that among the Rhodes students, there are three students
+	who share the same initials?  How about four students?  Mathematically, explain why or why not for each
+	case.
+	\vspace{.1in}
+	
+	 \emph{The next three questions are all related.}
+	 
+	 \vspace{.1in}
+	
+	\item Suppose the Rat owns owns 500 forks and 500 spoons.  Every time a student comes into the Rat to eat a meal, they always select (at random) one fork and one spoon to eat
+	with.  
+	
+	How many possible ways can a fork-and-spoon pair be chosen?  (Ignore any issues of some forks or spoons being unavailable because other students are already using them.)
+	
+	\item By the pigeonhole principle, how many meals must the Rat serve to guarantee that the exact same fork-and-spoon pair was chosen twice?  (Assume ``meal'' means one student eating
+a meal, not all students eating a meal.  This question is not supposed to be tricky.)
+	
+	\item Now assume that all 2000 students eat every meal in the Rat.  (That is, each student eats three meals per day there.)  
+	
+	What is the minimum number of days that the Rat has to serve meals
+	to guarantee that the same fork-and-spoon pair was chosen twice? 	\emph{Your answer should be an integer.}
+	Explain mathematically.
+\end{enumerate}
+\item Suppose I pick three integers arbitrarily.  Use the pigeonhole principle to explain why among those three
+integers,
+there must be a pair of integers whose difference is even.  (You may state whatever
+facts you want about even or odd numbers without proof, as long as your statements
+are true.)
+
+
+
+
+
+\end{enumerate}
+\end{document}

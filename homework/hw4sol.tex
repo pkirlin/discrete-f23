@@ -1,0 +1,250 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\sol}{\textbf{Solution: }}
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 4 Solutions}}
+
+\medbreak
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+\item Consider the following statement:
+$$\exists x \in \Z \ x^2=4$$
+Which of the following are correct translations of this statement?  \textbf{Write down all the letters which are correct.}
+Note that some of the sentences below may be factually correct, but not correct translations of the original statement.
+\begin{enumerate}
+        \item The square of each integer is 4.
+        \item Some integers have squares of 4.
+        \item The number $x$, when squared, is equal to 4, for some integer $x$.
+        \item If $x$ is an integer, then $x^2=4$.  (Hint: read page 70.)
+        \item Some integer has a square of 4.
+        \item There is at least one integer whose square is 4.
+\end{enumerate}
+
+\sol B, C, E, F.
+
+
+\item Consider the following statement:
+$$\forall n \in \Z \ \text{Even}(n) \to \text{Even}(n^2)$$
+(You may interpret Even($x$) to mean ``$x$ is an even number.'')
+
+Which of the following are correct translations of this statement?  \textbf{Write down all the letters which are correct.}
+Note that some of the sentences below may be factually correct, but not correct translations of the original statement.
+\begin{enumerate}
+        \item All integers are even and have even squares.
+        \item Given any integer that is even, the square of that integer is also even.
+        \item For all integers, there are some whose square is even.
+        \item Any integer that is even has an even square.
+        \item If an integer is even, then its square is even.
+        \item All even integers have even squares.
+\end{enumerate}
+
+\sol B, D, E, F
+               
+               
+               \newpage
+        \item Let $E(x,y)$ mean ``person $x$ enjoys class $y$,'' let $S$ be the set of
+        all students, and let $C$ be the set of all computer science classes.
+        
+        Translate each of the following into English statements.  Make your sentences as natural-sounding
+        as possible, while still being precise in meaning.
+        
+         \begin{enumerate}
+                \item $\forall x \in S \  \forall y \in C \  E(x, y)$
+                
+                \sol Every student enjoys every class.
+                \item $\exists x \in S \  \exists y \in C \  E(x, y)$
+                
+                \sol There is a student who enjoys some class.
+                \item $\forall x \in S \  \exists y \in C \  E(x, y)$
+                
+                \sol Every student has a class that they enjoy. / Every student enjoys some class (possibly a different class for each student!).
+                \item $\exists x \in S \  \forall y \in C \  E(x, y)$
+                
+                \sol There is a student who enjoys all classes.
+                \item $\forall y \in C \  \exists x \in S \  E(x, y)$
+                
+                \sol Every class has a student who enjoys it.
+                \item $\exists y \in C \  \forall x \in S \  E(x, y)$
+                
+                \sol There is a class that is enjoyed by every student.  /  Every student enjoys some class (the same class for all students!).
+                
+        \end{enumerate}
+
+
+\item Complete the following proofs using the method described in class (line numbers, 
+rule justifications, etc).
+
+\begin{enumerate}
+
+\item P1: $\exists w \in D \ \nott M(w) \to N(w)$ \\
+        P2: $\forall x \in D \ \nott M(x) \lor R(x)$ \\
+        P3: $\forall y \in D \ \nott N(y) \to \nott R(y)$ \\
+        Prove: $\exists z \in D \ N(z)$
+        
+        
+        \textbf{Solution 1:}
+        
+        \begin{tabular}{|r|l|c|c|} \hline
+                Line & Statement & Rule & Lines Used \\ \hline
+                1 & $\nott M(a) \to N(a)$ & Existential instantiation & P1 \\ \hline
+                2 & $\nott M(a) \lor R(a)$ & Universal instantiation & P2 \\ \hline
+                3 & $\nott N(a) \to \nott R(a)$ & Universal instantiation & P3 \\ \hline
+                4 & $ R(a) \to N(a)$ & Contrapositive & 3 \\ \hline
+                5 & $N(a)$ & Dilemma & 2, 1, 4 \\ \hline
+                6 & $\exists z \in D \ N(z)$ & Existential generalization & 5 \\ \hline
+                \end{tabular}
+                
+        \textbf{Solution 2:}
+        
+        \begin{tabular}{|r|l|c|c|} \hline
+                Line & Statement & Rule & Lines Used \\ \hline
+                1 & $\nott M(a) \to N(a)$ & Existential instantiation & P1 \\ \hline
+                2 & $\ \vline \ \nott N(a)$ & Assume & --- \\ \hline
+                3 & $\ \vline \ M(a)$ & Modus tollens & 1, 2 \\ \hline
+                4 & $\ \vline \ \nott M(a) \lor R(a)$ & Universal instantiation & P2 \\ \hline
+                5 & $\ \vline \ R(a)$ & Disjunctive syllogism & 3, 4 \\ \hline
+                6 & $\ \vline \ N(a)$ & Universal modus tollens & P3, 5 \\ \hline
+                7 & $\ \vline \ N(a)\land \nott N(a)$ & Conjunctive addition & 6, 2 \\ \hline
+                8 & $N(a)$ & Closing cond world w/ contra & 2--7 \\ \hline
+                9 & $\exists z \in D \ N(z)$ & Existential generalization & 8 \\ \hline
+                
+                                \end{tabular}
+        
+\item P1: $\forall w \in D \ \nott R(w) \land Q(w)$ \\
+        P2: $\forall x \in D \ Q(x) \to \nott (P(x) \land S(x))$ \\
+        P3: $\forall y \in D \ (T(y) \to R(y)) \to P(y)$ \\
+        Prove: $\forall z \in D \ S(z) \to T(z)$
+        
+        
+  \textbf{Solution:}
+        
+        \begin{tabular}{|r|l|c|c|} \hline
+                Line & Statement & Rule & Lines Used \\ \hline
+                1 & $\nott R(a) \land Q(a)$ & Universal instantiation & P1 \\ \hline
+                2 & $Q(a)$ & Conjunctive simplification & 1 \\ \hline
+                3 & $\nott (P(a) \land S(a))$ & Universal modus ponens & 2, P2 \\ \hline
+                4 & $\nott P(a) \lor \nott S(a))$ & DeMorgan's law & 3 \\ \hline
+                5 & $\ \vline \ S(a)$ & Assume & --- \\ \hline
+                6 & $\ \vline \ \nott P(a)$ & Disjunctive syllogism & 5, 4 \\ \hline
+                7 & $\ \vline \ \nott (T(a) \to R(a))$& Universal modus tollens & P3, 6 \\ \hline
+                8 & $\ \vline \ T(a) \land \nott R(a)$ & Definition of implication & 7 \\ \hline
+                9 & $\ \vline \ T(a)$ & Conjunctive simplification & 8 \\ \hline
+                10& $S(a) \to T(a)$ & Closing cond world w/out contra & 5--9 \\ \hline
+                11& $\forall z \in D \ S(z) \to T(z)$ & Universal generalization & 10 \\ \hline
+
+                \end{tabular}
+        
+\item P1: $\forall w \in D \ \nott B(w)$ \\
+        P2: $\forall x \in D \ Q(x) \to (R(x) \land T(x))$ \\
+        P3: $\forall y \in D \ [B(y) \to \nott Q(y)] \to [R(y) \to B(y)]$ \\
+        Prove: $\forall z \in D \ \nott Q(z)$
+        
+        
+        \textbf{Solution 1:}
+        
+        \begin{tabular}{|r|l|c|c|} \hline
+                Line & Statement & Rule & Lines Used \\ \hline
+                1 & $\nott B(a)$ & Universal instantiation & P1 \\ \hline
+                2 & $\nott B(a) \lor \nott Q(a)$ & Disjunctive addition & 1 \\ \hline
+                3 & $B(a) \to \nott Q(a)$ & Definition of implication & 2 \\ \hline
+                4 & $R(a) \to B(a)$ & Universal modus ponens & P3, 3 \\ \hline
+                5 & $\nott R(a)$ & Modus tollens & 4, 1 \\ \hline
+                6 & $\nott R(a) \lor \nott T(a)$& Disjunctive addition & 5\\ \hline
+                7 & $\nott (R(a) \land  T(a))$ & DeMorgan's law & 6 \\ \hline
+                8 & $\nott Q(a)$& Universal modus tollens & P2, 7 \\ \hline
+                9 & $\forall z \in D \ \nott Q(z)$ & Universal generalization & 8 \\ \hline
+                \end{tabular}
+                
+        \textbf{Solution 2:}
+        
+        \begin{tabular}{|r|l|c|c|} \hline
+                Line & Statement & Rule & Lines Used \\ \hline
+                1 & $\nott B(a)$ & Universal instantiation & P1 \\ \hline
+                2 & $Q(a) \to (R(a) \land T(a))$ & Universal instantiation & P2 \\ \hline
+                3 & $[B(a) \to \nott Q(a)] \to [R(a) \to B(a)]$ & Universal instantiation & P3 \\ \hline
+                4 & $\nott [B(a) \to \nott Q(a)] \lor [R(a) \to B(a)]$ & Definition of implication & 3 \\ \hline
+                5 & $[B(a) \land Q(a)] \lor [\nott R(a) \lor B(a)]$ & Definition of implication & 4 \\ \hline
+                6 & $[[B(a) \land Q(a)] \lor \nott R(a)] \lor B(a)$ & Associative law & 5 \\ \hline
+                7 & $[B(a) \land Q(a)] \lor \nott R(a)$ & Disjunctive syllogism & 6, 1 \\ \hline
+                8 & $\ \vline \ Q(a)$ & Assume & --- \\ \hline
+                9 & $\ \vline \ R(a) \land T(a)$ & Modus ponens & 2, 8 \\ \hline
+                10& $\ \vline \ R(a)$ & Conjunctive simplification & 9 \\ \hline
+                11& $\ \vline \ B(a) \land Q(a)$ & Disjunctive syllogism & 7, 10 \\ \hline
+                12& $\ \vline \ B(a)$& Conjunctive simplification & 11 \\ \hline
+                13& $\ \vline \ B(a) \land \nott B(a)$ & Conjunctive addition & 12 \\ \hline
+                14 & $\nott Q(a)$& Closing cond world with contra & 8--13 \\ \hline
+                15 & $\forall z \in D \ \nott Q(z)$ & Universal generalization & 14 \\ \hline
+
+        \end{tabular}
+\end{enumerate}
+
+\newpage
+
+\item In this problem, you are given a number of statements in English about people and musical instruments.
+You are also given a number of statements in predicate logic.  For each of the English statements, you must
+decide which predicate logic statements are true for the English statement in question.
+
+Here are the predicate logic statements you can pick from:
+
+Let $L$ be the set of people ``Kate, Lisa, John;'' let $M$ be the set of musical instruments ``piano, trumpet, accordion;'' and 
+let the predicate $P(x,y)$ mean ``person $x$ plays instrument $y$.''
+
+\begin{enumerate}
+        \item[1.]  $\forall x \in L \ \exists y \in M \ P(x, y)$
+        \item[2.]  $\exists x \in L \ \forall y \in M \ P(x, y)$
+        \item[3.]  $\forall y \in M \ \exists x \in L \ P(x, y)$
+        \item[4.]  $\exists y \in M \ \forall x \in L \ P(x, y)$
+\end{enumerate}
+
+You may assume that in each situation, each person plays only the instruments listed for him or her, and no others. In other words, if its not listed, they don't play it!
+
+Here are the English statements.  For each statement, write down the corresponding numbers of all the predicate logic statements above that are true for the
+English statement.
+
+\begin{enumerate}
+\item John plays piano, Kate plays trumpet, and Lisa plays accordian.
+
+\textbf{Solution:} 1, 3
+
+\item John plays piano, Kate plays piano and trumpet, and Lisa plays piano and accordian.
+
+\textbf{Solution:} 1, 3, 4
+
+\item John plays trumpet, Kate plays piano, trumpet, and accordian, and Lisa doesn't play anything.
+
+\textbf{Solution:} 2, 3
+
+\item John plays trumpet, Kate plays piano and trumpet, and Lisa plays trumpet.
+
+\textbf{Solution:} 1, 4
+
+\item John plays trumpet, Kate doesn't play anything, and Lisa plays piano and accordian.
+
+\textbf{Solution:} 3
+
+\item John plays accordian, Kate plays piano and accordian, and Lisa plays piano.
+
+\textbf{Solution:} 1
+
+\item John plays piano, trumpet, and accordian, Kate plays trumpet and accordian, and Lisa plays accordian.
+
+\textbf{Solution:} 1, 2, 3, 4
+
+\item John plays piano and trumpet, Kate plays piano and accordian, and Lisa plays piano, trumpet, and accordian.
+
+\textbf{Solution:} 1, 2, 3, 4
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

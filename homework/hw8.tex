@@ -1,0 +1,52 @@
+\documentclass[11pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 8}}
+
+\bigskip
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\bigskip
+
+Prove the following statements by strong induction.  Make sure to follow the form from class:
+explicitly define $P(n)$, label the basis step(s), inductive step, where you define the inductive hypothesis, where you define what you want to prove
+and where you use the inductive hypothesis.  
+\begin{enumerate}
+
+\item Suppose we define a sequence as follows: 
+$$
+a_1 = 3; \ a_2 = 5; \text{ and for all integers }i \geq 3, \ a_i = 4a_{i-1} -3a_{i-2}. 
+$$
+Prove $\forall n \in \Z^{\geq 1} \ a_n = 3^{n-1}+2.$
+
+\item Suppose we define a sequence as follows: 
+$$
+b_0 = 3; \ b_1 = 1; \ b_2 = 3; \text{ and for all integers }i \geq 3, \ b_i = b_{i-3} + b_{i-2}  +b_{i-1}. 
+$$
+Prove that every term in the sequence is odd.
+
+
+\item Suppose we define a sequence as follows: 
+$$
+c_0 = 2; \ c_1=7; \text{ and for all integers }i \geq 2, \ c_i = 3c_{i-1} -2c_{i-2}. 
+$$
+Prove $\forall n \in \Z^{\geq 0} \ 5 \mid (c_n - 2)$.
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}

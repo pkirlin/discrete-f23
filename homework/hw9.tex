@@ -1,0 +1,52 @@
+\documentclass[11pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\powerset}[1]{\mathcal P\left({#1}\right)}
+
+\begin{document}
+
+\textbf{Discrete Structures, Fall 2017, Homework 9}
+
+\bigskip
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any four sets $A$, $B$, $C$, and $D$, if $C \subseteq (D \cup A)$ and $B \subseteq D^c$, then
+	$C \cap B \subseteq A$.
+	
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any three sets $A$, $B$, and $C$, if $A \cap C \subseteq B$, then
+	$(A-B) \cap (C-B) = \emptyset$.
+	
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any three sets $A$, $B$, and $C$, if $A \cup C \subseteq B$, then
+	$C \times A \subseteq B \times B$.
+	
+	\item Prove the following statement using an \textit{algebraic proof}:
+	
+	For any two sets $A$ and $B$, $(B \cup (B-A^c))^c = B^c$.
+	
+	\item Answer the following questions about power sets:
+	
+	\begin{enumerate}
+		\item Define $S = \{x,y,z\}$.  What is $\powerset{S}$?
+		\item What is $\powerset{\emptyset}$?
+		\item What is $\powerset{\powerset{\emptyset}}$?
+	\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,256 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\indentpar}{\addtolength{\leftskip}{5mm}}
+\newcommand{\stopindentpar}{\addtolength{\leftskip}{-5mm}}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 6 Solutions}}
+
+\medbreak
+
+\textit{You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.}
+
+\bigskip
+
+For each statement below, state whether it is true or false. Then prove the statement if it is true,
+or its negation if it is false.\medskip
+
+Remember, an example may only be used to prove that an existential statement is true or a universal
+statement is false. Any example or counter-example must include specific values for the variables
+and enough algebra and justification to illustrate that the example proves what you are claiming
+it proves.\medskip
+
+You do not need to translate each statement into symbols first, though it is often useful to do so.
+
+\begin{enumerate}
+
+        \item For any integers $a$ and $b$, if $a \mid b$, then $a \mid (a+b)$.  % true
+        
+        \textbf{Solution:} This is a true statement.
+
+\textbf{Proof:}
+
+Suppose $a$ and $b$ are arbitrarily chosen integers.
+
+Assume $a \mid b$.
+
+By the definition of divides, we know there exists an integer $k$ such that $ak=b$.
+
+\textit{[We're trying to show $a \mid (a+b)$, so we want to get an equation that
+ looks like  $a+b = a*(\text{an integer})$]}
+ 
+$a + b = a + ak = a(1+k)$ by algebra and substitution.
+
+$1+k$ is an integer by closure of the integers under addition.
+
+Therefore, because $a+b = a(1+k)$ and $1+k \in \Z$, we know $a \mid (a+b)$ by the definition of divides.
+
+        
+        \item If $n$ is an odd integer, then $n^2-1$ is divisible by 4.  % true
+        
+        \textbf{Solution:} This is a true statement.
+
+\textbf{Proof:}
+
+Suppose $n$ is an arbitrary odd integer.  \textit{[Or, ``Suppose $n$ is an arbitrary integer
+and assume $n$ is odd.''  Either one is fine; they mean the same thing.]}
+
+By the definition of odd, there exists an integer $k$ such that $x=2k+1$.
+
+\textit{[We're trying to show $n^2-1$ is divisible by 4, so we want to get an equation that
+ looks like  $n^2-1=$ 4 * (an integer)]}
+
+$n^2-1 = (2k+1)^2-1 = 4k^2 + 4k + 1 - 1 = 4k^2 + 4k$ by algebra.
+
+
+$n^2-1 = (2k+1)^2-1 = 4k^2 + 4k = 4(k^2+k)$ by algebra.
+
+Let $p=k^2+k$.  We know $p \in \Z$ because $\Z$ is closed under multiplication and addition. 
+
+Therefore, $n^2-1 = 4p$, and therefore $4 \mid n^2-1$ by the definition of divides.
+
+        
+        \item $\forall a, b, c \in \Z \ [(a \mid c) \land (b \mid c)] \to [(a \mid b) \lor (b \mid a)]$.  % false
+        
+        \textbf{Solution:} This is a false statement.
+
+\textbf{Counter-example:}  \textit{[Negation would be $\exists a, b, c \in \Z \ [(a \mid c) \land (b \mid c)] \land [(a \nmid b) \land (b \nmid a)]$.]}
+
+Let $a=2$, $b=3$, and $c=6$.  Then it is true that $a\mid c$ and
+$b \mid c$ (clearly $2 \mid 6$ and $3 \mid 6$), but it is not true that $a \mid b$ or $b \mid a$
+(because 2 does not divide 3 and 3 does not divide 2).
+
+        
+        \item The product of any two consecutive integers is even.  
+        
+        Hints:  Use only one universally-quantified variable, not two.  Use the quotient-remainder theorem with $d=2$.
+        
+        
+        
+                        \textbf{Symbols:} $\forall x \in \Z \ \exists k \in \Z \ x(x+1)=2k$.
+
+        \textbf{Solution:}
+
+        Suppose $x$ is any arbitrary integer.
+
+        By the quotient remainder theorem, there exists an integer $q$ such that $x=2q$ or $x=2q+1$.
+
+        Case 1: Assume $x=2q$.
+
+\indentpar
+$x(x+1)=(2q)(2q+1) = 2[q(2q+1)]$ by algebra.
+
+Choose $k=q(2q+1)$.  $k \in \Z$ by closure of the integers under addition and multiplication, and so therefore
+we know $x(x+1)=2k$ for some integer $k$.
+
+Therefore, $x(x+1)$ is even by the definition of even.
+
+\stopindentpar
+Case 2: Assume $x=2q+1$.
+
+\indentpar
+$x(x+1) = (2q+1)(2q+2) = (2q+1)(2)(q+1) = 2[(2q+1)(q+1)]$.
+
+Choose $k=(2q+1)(q+1)$.  $k \in \Z$ by closure of the integers under addition and multiplication, and so therefore
+we know $x(x+1)=2k$ for some integer $k$.
+
+Therefore, $x(x+1)$ is even by the definition of even.
+
+\stopindentpar
+
+
+Because in both Case 1 and 2 we reach the same conclusion (that $x(x+1)$ is even),
+and we know the quotient-remainder theorem tells us one of the two cases must be true, 
+we can conclude that $x(x+1)$ must be even in general.
+        
+        
+        
+        \item For any integers $m$, $m^2-m$ can be written as either $3k$ or $3k+2$ for some integer $k$.
+        
+        Hints:  Use the quotient-remainder theorem on $m$.  See if you can determine on your own what $d$ should be.          
+
+                
+\textbf{Symbols: } $\forall m \in \Z \  [\exists k \in \Z \ m^2-m=3k \lor m^2-m=3k+2]$
+
+\textbf{Proof:}
+
+Let $m$ be an arbitrary integer.
+
+By the quotient-remainder theorem, there exists an integer $q$ such that $m=3q$, $m=3q+1$,
+or $m=3q+2$.
+
+Case 1: Assume $m=3q$
+
+\indentpar
+
+$m^2-m = (3q)^2-3q = 9q^2 - 3q = 3(3q^2-q)$.
+
+Let $k=3q^2-q$.  $k\in \Z$ by the closure of the integers under multiplication and addition.
+
+So $m^2-m=3k$.
+
+\stopindentpar
+
+Case 2: Assume $m=3q+1$
+
+\indentpar
+\begin{align*}
+m^2-m &= (3q+1)^2 - (3q+1) \\ 
+&= 9q^2 + 6q + 1 -3q -1 \\&= 9q^2 +3q \\&= 3(3q^2+q)
+\end{align*}
+Let $k=3q^2+q$.  $k\in \Z$ by the closure of the integers under multiplication and addition.
+
+So $m^2-m=3k$.
+
+\stopindentpar
+
+Case 3: Assume $m=3q+2$
+
+\indentpar
+
+\begin{align*}
+m^2-m &= (3q+2)^2 - (3q+2) \\ 
+&= 9q^2 + 12q + 4 -3q -2 \\&= 9q^2 +9q+2 \\&= 3(3q^2+3q)+2
+\end{align*}
+
+Let $k=3q^2+3q$.  $k\in \Z$ by the closure of the integers under multiplication and addition.
+
+So $m^2-m=3k+2$.
+
+\stopindentpar
+
+In all three cases, we reach the conclusion that $m^2-m=3k$ or $m^2-m=3k+2$ for some integer
+$k$.  Because we know one of the three cases must be true by the quotient-remainder 
+theorem, we may conclude that $m^2-m=3k$ or $m^2-m=3k+2$ for some integer
+$k$. 
+
+\end{enumerate}
+Hints: Remember, not all of these are necessarily true!  Use the step-by-step example proofs from the handouts last week
+as a guide for these.
+ 
+\bigskip
+\textbf{Do the following problems about sequences and series.  Refer to section 5.1.}
+
+\begin{enumerate}\setcounter{enumi}{5}
+        
+\item Write out the first four terms for each of the following sequences.  List the name
+of the variable, the subscript, and the number itself.  For example, for ``$\forall n 
+\in \Z^{\geq 1} \ d_n = 2n$'' you would write ``$d_1 = 2, \ d_2 = 4, \ d_3 = 6, \ d_4 = 8$.''
+
+\begin{enumerate}
+        \item $\forall i \in \Z^{\geq 2} \ a_i = i(i-1)$
+        
+        \textbf{Solution:} $a_2 = 2, a_3 = 6, a_4 = 12, a_5=20$.
+        
+        \item $\displaystyle \forall j \in \Z^{\geq 0} \ s_j = \frac{j}{j!}$
+        
+         \textbf{Solution:} $s_0 = 0, s_1 = 1, s_2 = 1, s_3 = 1/2$.
+        
+        \item $\displaystyle \forall k \in \Z^+ \ z_k = (1-k)(k-1)$
+        
+         \textbf{Solution:} $z_1 = 0, z_2 = -1, z_3 = -4, z_4 = -9$.
+        
+\end{enumerate}
+
+
+\item Write the following sums using sigma ($\Sigma$) notation.
+
+\begin{enumerate}
+
+         \item $\displaystyle \frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \cdots + \frac{n}{(n+1)!}
+        =\displaystyle \sum_{i=1}^n \frac{i}{(i+1)!}$
+        \item $\displaystyle \frac{n}{1} + \frac{n-1}{2} + \frac{n-2}{3} + \cdots + \frac{1}{n}
+        =\displaystyle \sum_{i=1}^n \frac{n-i+1}{i}$    
+        \item $\displaystyle 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots
+        =\displaystyle \sum_{i=1}^\infty \frac{(-1)^{i+1}}{i}$\end{enumerate}
+
+\item Rewrite each of the following summations as an equivalent expression by separating off the last term.
+For reference, the first one has been done for you (we did this in class).
+
+\begin{enumerate}
+
+        \item (Example:) $\displaystyle \sum_{i=0}^{k+1}{i^2} = \sum_{i=0}^{k}{i^2} + (k+1)^2$
+        \item $\displaystyle \sum_{i=1}^{m+1}{\frac{1}{2^{i-1}}}$ 
+        
+        \textbf{Solution:}
+        $\displaystyle \sum_{i=0}^{m+1}{\frac{1}{2^{i-1}}} = \sum_{i=0}^{m}{\frac{1}{2^{i-1}}} + \frac{1}{2^m}$ 
+        
+        \item $\displaystyle \sum_{i=0}^{k}{\frac{i+1}{i+2}}$
+        
+         \textbf{Solution:} $\displaystyle \sum_{i=0}^{k}{\frac{i+1}{i+2}} =  \sum_{i=0}^{k-1}{\frac{i+1}{i+2}} + \frac{k+1}{k+2}$
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

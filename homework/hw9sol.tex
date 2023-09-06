@@ -1,0 +1,215 @@
+\documentclass[11pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\proofnote}[1]{[\textit{Note: #1}]}
+\newcommand{\powerset}[1]{\mathcal P\left({#1}\right)}
+
+
+\begin{document}
+
+\textbf{Discrete Structures, Fall 2017, Homework 9}
+
+\bigskip
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any four sets $A$, $B$, $C$, and $D$, if $C \subseteq (D \cup A)$ and $B \subseteq D^c$, then
+	$C \cap B \subseteq A$.
+	
+	
+	        
+        \textbf{Proof:}
+        
+        Let $A$, $B$, $C$, and $D$ be arbitrary sets.
+        
+        Assume $C \subseteq (D \cup A)$ and $B \subseteq D^c$.
+        
+        \proofnote{We are trying to prove that $C \cap B \subseteq A$, so let's assume $x$ is an arbitrary element in the left side of the subset
+        ($C \cap B$) and show $x$ must be in the right side ($A$).}
+        
+        Let $x$ be an arbitrary element in $U$.  Assume $x \in C \cap B$.  
+        
+        \proofnote{The line above could also be written as ``Let $x$ be an arbitrary element in $C \cap B$.''}
+        
+        $x \in C \cap B$ \qquad (from above)
+        
+        $x \in C \land x \in B$ \qquad (def of intersection)
+        
+        $x \in C$ \qquad (conjunctive simplification)
+        
+        $x \in B$ \qquad (conjunctive simplification)
+        
+        $x \in D \cup A$ \qquad (because $C \subseteq (D \cup A)$ and $x \in C$)
+        
+        $x \in D \lor x \in A$ \qquad (def of union)
+        
+        $x \in D^c$ \qquad (because $B \subseteq D^c$ and $x \in B$)
+        
+        $x \not\in D$ \qquad (def of set complement)
+        
+        $x \in A$ \qquad (disjunctive syllogism: note $x \in D \lor x \in A$ but $x \not\in D$)
+        
+        Because we assumed $x$ was an arbitrary element in $C \cap B$ and we showed $x \in A$, we can conclude (by the definition of subset)
+        that $C \cap B \subseteq A$.
+                
+
+	
+	
+	 \item Prove the following statement using an \textit{element proof}:
+        
+        For any three sets $A$, $B$, and $C$, if $A \cap C \subseteq B$, then
+        $(A-B) \cap (C-B) = \emptyset$.
+        
+        
+        \textbf{Proof:}
+                
+        Let $A$, $B$, and $C$ be arbitrary sets, and assume that $A \cap C \subseteq B$.
+        
+        Assume by way of contradiction that $\exists x \in U \ x \in (A-B) \cap (C-B)$.
+        
+        $(x \in A-B) \land (x \in C-B)$ by definition of intersection.
+        
+        $(x \in A \land x \not\in B) \land (x \in C \land x \not\in B)$ by definition of set difference.
+        
+        $x \in A \land x \not\in B \land x \in C$ by associativity, and removing one of the $\not\in B$'s (idempotent rule).
+        
+        $x \in A \land x \in C$ by conjunctive simplification.% (and commutativity).
+        
+        $x \not\in B$ by conjunctive simplification.
+        
+        $x \in (A \cap C)$ by definition of intersection.
+        
+        $x \in B$ because $x \in A \cap C$ and $A\cap C \subseteq B$.
+        
+        Now we have a contradiction between $x \in B$ and $x \not\in B$, so therefore our
+        assumption about there being an element in $(C-A) \cap (B-A)$ must have been wrong.
+        
+        Therefore, we know $\forall x \in U \ x \not\in (A-B) \cap (C-B)$.
+        
+        Therefore, by the definition of the empty set, $(A-B) \cap (C-B) = \emptyset$.
+        
+                
+
+        
+        \item Prove the following statement using an \textit{element proof}:
+        
+        For any three sets $A$, $B$, and $C$, if $A \cup C \subseteq B$, then
+        $C \times A \subseteq B \times B$.
+        
+        
+        
+        \textbf{Proof:}
+        
+        Let $A, B, $ and $C$ be arbitrary sets, and assume that $A \cup C \subseteq B$.
+        
+        \proofnote{We want to show $C \times A \subseteq B \times B$, so we'll do this with the standard method to prove a set is a subset of another set.  We'll pick an arbitrary
+        element in $C \times A$ and show that element must also be in $B \times B$.}
+        
+        Let $(x,y)$ be an arbitrary element in $C \times A$.
+        
+        $x\in C \land y \in A$ by definition of Cartesian product.
+        
+        $x \in C$ by conjunctive simplification.
+        
+        $y \in A$ by conjunctive simplification.
+        
+        \proofnote{At this point, our goal is to show $(x,y) \in B \times B$, which means showing that
+        $x \in B$ and $y \in B$.  We know $A \cup C \subseteq B$, which means if we can show $x$ is an element of $A \cup C$, we will be able to deduce that $x$ is a member of $B$ (by definition of subset).  The same argument goes for $y$. 
+        \vspace{.2in}\\
+        For $x$ to be in the union of $A$ and $C$, $x$ must be in either $A$ or $C$.  We already know $x \in A$,
+        so to build the statement ``$x \in A \lor x \in C$'' we will use the rule of disjunctive addition.}
+        
+        $x \in A \lor x \in C$ by disjunctive addition \emph{[note: $x \in A$ from above, so $x \in A \lor \text{whatever}$ is true no matter what the ``whatever'' part is]}
+        
+        $x \in A \cup C$ by definition of union
+        
+        $x \in B$ because $x \in A \cup C$ and $A\cup C \subseteq B$.
+        
+        $y \in A \lor y\in C$ by disjunctive addition \emph{[note: $y \in A$ from above, so $\text{whatever} \lor y \in A$ is true no matter what the ``whatever'' part is]}
+        
+        $y \in A \cup C$ by definition of union
+        
+        $y \in B$ because $y \in A \cup C$ and $A\cup C \subseteq B$.
+        
+        $x \in B \land y \in B$ by conjunctive addition.
+        
+        $(x,y) \in B \times B$ by definition of Cartesian product.
+        
+        %$(x,y) \in A \times B \to (x,y) \in B \times C$ by closing conditional world.
+        
+        %$\forall (x,y) \in U \ [(x,y) \in A \times B \to (x,y) \in B \times C]$ by generalizing from
+        %the generic particular (universal generalization).
+        
+        %$A \times B \subseteq B \times C$ by definition of subset.
+        
+        Because we have shown that if we choose an arbitrary element of $C \times A$,
+        then that element must also be in $B \times B$, then we can conclude that
+        $C \times A \subseteq B \times B$.
+        
+
+  \item Prove the following statement using an \textit{algebraic proof}:
+        
+        For any two sets $A$ and $B$, $(B \cup (B-A^c))^c = B^c$.
+      
+           
+        
+        \proofnote{We can do an algebraic proof here, because there are no initial 
+        assumptions about $A$ or $B$ (like one being a subset
+        of the other or something similar).  If there were any assumptions, we would need to do element proofs for subset in both directions to show equality.}
+        
+        
+        \textbf{Proof:}
+        \begin{align*}
+                (B \cup (B-A^c))^c &= (B \cup (B \cap (A^{c})^c))^c & \text{def of set difference} \\
+                &= (B \cup (B \cap A))^c & \text{double complement law*} \\
+                &= (B)^c = B^c & \text{absorption law} \\
+        \end{align*}
+        Note how we used absorption to change $B \cup (B \cap A)$ into just $B$ (and the
+        complement was kept around the parentheses).
+        
+        * OK to combine double complement with def of set difference from line above.
+        
+        Check the cheatsheet!  Absorption is one of those rules that doesn't come up very often.
+        
+        In this proof, you could also do DeMorgan's before the absorption.  In that case,
+        you would have ended up with a line that looks like $B^c \cap (B \cap A)^c$, which
+        you could do another DeMorgan's on to get $B^c \cap (B^c \cup A^c)$.  And then, on
+        that last line, you can do absorption to get $B^c$.
+        
+        
+        
+           \item    
+\begin{enumerate}
+                \item Define $S = \{x,y,z\}$.  What is $\powerset{S}$?
+                
+                \textbf{Solution}: $\powerset{S} = \{\emptyset, \{x\}, \{y\}, \{z\}, \{x,y\},\{x,z\},\{y,z\}, \{x,y,z\}\}$
+                \item What is $\powerset{\emptyset}$?
+                
+                \textbf{Solution}: $\powerset{\emptyset}= \{\emptyset\}$ \\
+                Note that this set is \emph{not} the empty set; it has one element in it!
+                
+                We can do a quick sanity check here.  We know that for any set $S$, the size of $\powerset{S}$
+                should be equal to 2 raised to the power of the size of $S$.  So because the size of $\emptyset$
+                is zero, the size of  $\powerset{\emptyset}$ should be $2^0=1$.
+
+                \item What is $\powerset{\powerset{\emptyset}}$?
+                
+                \textbf{Solution}: $\powerset{\emptyset}= \{\emptyset , \{\emptyset\}\}$ 
+                
+                This is the powerset of the set from part (b), so it should have $2^1=2$ elements, which it does:
+                the two elements are the empty set, and the set containing the empty set.
+        \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

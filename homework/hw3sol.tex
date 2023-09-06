@@ -1,0 +1,213 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 3 Solutions}}
+
+\medbreak
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+\item Complete the following proofs using the framework discussed in class.  Each line
+        of your proof must be justified with a rule of inference or logical equivalence and appropriate line numbers.
+
+\begin{enumerate}
+
+\item
+        \begin{tabular}[t]{ll}
+        P1 & $s \land e$ \\
+        P2 & $e \to b$ \\
+        P3 & $(b \land \nott m) \to \nott s$ \\ \hline
+        Prove: & $m$
+        \end{tabular}   
+        
+        
+        \textbf{Solution:}
+                
+                \begin{tabular}{|r|l|c|c|} \hline
+                Line & Statement & Rule & Lines Used \\ \hline
+                1 & $s$ & Conjunctive simplification & P1 \\ \hline
+                2 & $e$ & Conjunctive simplification & P1 \\ \hline
+                3 & $b$ & Modus ponens & 2, P2 \\ \hline
+                4 & $\nott (b \land \nott m)$ & Modus tollens & 1, P3 \\ \hline
+                5 & $\nott b \lor m$ & DeMorgan's law & 4 \\ \hline
+                6 & $m$ & Disjunctive syllogism & 3, 5 \\ \hline
+                
+                    \end{tabular}
+        
+        
+        
+                \item
+                        \begin{tabular}[t]{ll}
+                        P1 & $(p \to q) \land (r \to s)$ \\
+                        P2 & $y$ \\
+                        P3 & $(s \land q) \to \nott y$ \\ \hline
+                        Prove: & $\nott p \lor \nott r$
+                \end{tabular}
+                
+    \textbf{Solution A:}
+                
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $p \to q$ & Conjunctive simplification & P1 \\ \hline
+2 & $r \to s$ & Conjunctive simplification & P2 \\ \hline
+3 & $\nott (s \land q)$ & Modus tollens & P2, P3 \\ \hline
+4 & $\nott s \lor \nott q$ & DeMorgan's law & 3 \\ \hline
+5 & $q \to \nott s$ & Definition of implication & 4 \\ \hline
+6 & $p \to \nott s$ & Hypothetical syllogism & 1, 5 \\ \hline
+7 & $\nott s \to \nott r$ & Contrapositive & 2 \\ \hline
+8 & $p \to \nott  r$ & Hypothetical syllogism & 6, 7 \\ \hline
+9 & $\nott p \lor \nott  r$ & Definition of implication & 8 \\ \hline
+\end{tabular}
+                
+\textbf{Solution B:}
+                
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $p \to q$ & Conjunctive simplification & P1 \\ \hline
+2 & $r \to s$ & Conjunctive simplification & P2 \\ \hline
+3 & $\nott (s \land q)$ & Modus tollens & P2, P3 \\ \hline
+4 & $\ \ \vline \ p \land r $& Assume & --- \\ \hline
+5 & $\ \ \vline \ p$ & Conjunctive simplification &4 \\ \hline
+6 & $\ \ \vline \ r$ & Conjunctive simplification &4 \\ \hline
+7 & $\ \ \vline \ q$ & Modus ponens & 1, 5 \\ \hline
+8 & $\ \ \vline \ s$ & Modus ponens & 2, 6 \\ \hline
+9 & $\ \ \vline \ s \land q$ & Conjunctive addition & 7, 8 \\ \hline
+10& $\ \ \vline \ (s \land q) \land \nott (s \land q)$ & Conjunctive addition & 9, 3 \\ \hline
+11& $\nott (p \land r)$ & Closing cond world with contra & 4--10  \\ \hline
+12& $\nott p \lor \nott r$ & DeMorgan's law & 11  \\ \hline
+\end{tabular}
+
+\textbf{Solution C:}
+                
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $p \to q$ & Conjunctive simplification & P1 \\ \hline
+2 & $r \to s$ & Conjunctive simplification & P2 \\ \hline
+3 & $\nott (s \land q)$ & Modus tollens & P2, P3 \\ \hline
+4 & $\ \ \vline \ p  $& Assume & --- \\ \hline
+5 & $\ \ \vline \ q$ & Modus ponens & 1, 4 \\ \hline
+6 & $\ \ \vline \ \nott s \lor \nott q$ & DeMorgan's law & 3 \\ \hline
+7 & $\ \ \vline \ \nott s$ & Disjunctive syllogism & 5, 6\\ \hline
+8 & $\ \ \vline \ \nott r$ & Modus tollens & 2, 7\\ \hline
+9& $p \to \nott r$ & Closing cond world without contra & 4--9  \\ \hline
+10& $\nott p \lor \nott r$ & Definition of implication & 9  \\ \hline
+\end{tabular}         
+
+                
+                                
+                
+                \item
+                        \begin{tabular}[t]{ll}
+                        P1 & $p \to q$ \\
+                        P2 & $\nott q \lor r$ \\
+                        P3 & $s \lor (y \land \nott r)$ \\ \hline
+                        Prove: & $\nott s \to \nott (p \lor \nott y)$
+                \end{tabular}
+                
+ \textbf{Solution:}
+                
+                \begin{tabular}{|r|l|c|c|} \hline
+                Line & Statement & Rule & Lines Used \\ \hline
+                1 & \ \ \vline \ $\nott s$ & Assume & ---\\ \hline
+                2 & \ \ \vline \ $y \land \nott r$ & Disjunctive syllogism & P3, 1\\ \hline
+                3 & \ \ \vline \ $y $ & Conjunctive simplification & 2\\ \hline
+                4 & \ \ \vline \ $\nott r$ & Conjunctive simplification & 2\\ \hline
+                5 & \ \ \vline \ $\nott q$ & Disjunctive syllogism & P2, 4\\ \hline
+                6 & \ \ \vline \ $\nott p$ & Modus tollens & P1, 5\\ \hline
+                7 & \ \ \vline \ $\nott p \land y$ & Conjunctive addition & 6, 3\\ \hline
+                8 & \ \ \vline \ $\nott (p \lor \nott y)$ & DeMorgan's law & 7\\ \hline
+                9 & $\nott s \to \nott (p \lor \nott y)$ & Closing cond world without contra & 1--8\\ \hline
+                \end{tabular}
+                
+                
+                \item
+                        \begin{tabular}[t]{ll}
+                        P1 & $a \land \nott d$ \\
+                        P2 & $b \to (e \to d)$ \\ \hline
+                        Prove: & $(a \to b) \to \nott e$
+                \end{tabular}
+
+ \textbf{Solution A:}
+
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & \ \ \vline \ $a \to b$ & Assume & ---\\ \hline
+2 & \ \ \vline \ $a$ & Conjunctive simplification & P1\\ \hline
+3 & \ \ \vline \ $\nott d$ & Conjunctive simplification & P1\\ \hline
+4 & \ \ \vline \ $b$ & Modus ponens & 1, 2\\ \hline
+5 & \ \ \vline \ $e \to d$ & Modus ponens & P2, 4\\ \hline
+6 & \ \ \vline \ $\nott e$ & Modus tollens & 3, 5\\ \hline
+7 & $(a \to b) \to \nott e$ & Closing cond world without contra & 1--5 \\ \hline
+\end{tabular}
+
+\textbf{Solution B:}
+
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+2 & $a$ & Conjunctive simplification & P1\\ \hline
+3 & $\nott d$ & Conjunctive simplification & P1\\ \hline
+4 & $\nott b \lor (e \to d)$ & DeMorgan's law & P2\\ \hline
+5 & $\nott b \lor (\nott e \lor d)$ & DeMorgan's law & 4\\ \hline
+6 & $(\nott b \lor \nott e) \lor d$ & Associative law & 5\\ \hline
+7 & $\nott b \lor \nott e $ & Disjunctive syllogism & 3, 6\\ \hline
+8 & $a \lor \nott e $ & Disjunctive addition & 2\\ \hline
+9 & $(a \lor \nott e) \land (\nott b \lor \nott e) $ & Conjunctive addition & 7, 8\\ \hline
+10& $(a \land \nott b) \lor \nott e$ & Distributive law & 9 \\ \hline
+11& $\nott (a \land \nott b) \to \nott e$ & Definition of implication & 10 \\ \hline
+12& $(\nott a \lor b) \to \nott e$ & DeMorgan's law& 11 \\ \hline
+13& $(a \to b) \to \nott e$ & Definition of implication& 12 \\ \hline
+\end{tabular}
+
+
+
+\end{enumerate}
+
+        \item Translate each of the following English sentences into formal language -- that is, using the symbols $\forall, \exists, \in,$ etc.  Use the following predicates: 
+        
+        $B(s)$ means ``$s$ is an business major,'' \\
+        $C(s)$ means ``$s$ is a computer science
+        major,'' and \\
+        $M(s)$ means ``$s$ is a math major.'' 
+        
+         Use the domain $S = $ the set of
+        all students at Rhodes College.
+        
+        \begin{enumerate}
+                \item There is an business major who is also a math major.
+                
+                \textbf{Solution:} $\exists x \in S \ B(x) \land M(x)$
+                
+                \item Every computer science major is also an business major.
+                
+                \textbf{Solution:} $\forall x \in S \ C(x) \to B(x)$
+                
+                \item No computer science majors also major in business.
+                
+                \textbf{Solution:} $\forall x \in S \ C(x) \to \nott B(x) \equiv \forall x \in S \ \nott C(x) \lor \nott B(x)$
+                
+                \item Some people majoring in CS are also majoring in math.
+                
+                \textbf{Solution:} $\exists x \in S \ C(x) \land M(x)$
+                
+                \item Some computer science majors are business majors as well, but some are not.  (Think carefully; this is tricky.)
+                
+                \textbf{Solution:} $\exists x \in S \ \exists y \in S \ C(x) \land C(y) \land B(x) \land \nott B(y)$
+
+                
+                
+        \end{enumerate}
+        
+
+
+\end{enumerate}
+
+\end{document}

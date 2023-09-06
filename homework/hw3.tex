@@ -1,0 +1,86 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+
+\begin{document}
+
+{\textbf{Discrete Structures, Fall 2017, Homework 3}}
+
+\medbreak
+
+You must write the solutions to these problems legibly on your own paper, with
+the problems in sequential order, and with all sheets stapled together.
+
+\begin{enumerate}
+
+\item Complete the following proofs using the framework discussed in class.  Each line
+        of your proof must be justified with a rule of inference or logical equivalence and appropriate line numbers.
+
+\begin{enumerate}
+
+\item
+        \begin{tabular}[t]{ll}
+        P1 & $s \land e$ \\
+        P2 & $e \to b$ \\
+        P3 & $(b \land \nott m) \to \nott s$ \\ \hline
+        Prove: & $m$
+        \end{tabular}           
+        
+                \item
+                        \begin{tabular}[t]{ll}
+                        P1 & $(p \to q) \land (r \to s)$ \\
+                        P2 & $y$ \\
+                        P3 & $(s \land q) \to \nott y$ \\ \hline
+                        Prove: & $\nott p \lor \nott r$
+                \end{tabular}
+                
+                                
+                
+                \item
+                        \begin{tabular}[t]{ll}
+                        P1 & $p \to q$ \\
+                        P2 & $\nott q \lor r$ \\
+                        P3 & $s \lor (y \land \nott r)$ \\ \hline
+                        Prove: & $\nott s \to \nott (p \lor \nott y)$
+                \end{tabular}
+                
+                
+                
+                \item
+                        \begin{tabular}[t]{ll}
+                        P1 & $a \land \nott d$ \\
+                        P2 & $b \to (e \to d)$ \\ \hline
+                        Prove: & $(a \to b) \to \nott e$
+                \end{tabular}
+
+
+
+
+\end{enumerate}
+
+        \item Translate each of the following English sentences into formal language -- that is, using the symbols $\forall, \exists, \in,$ etc.  Use the following predicates: 
+        
+        $B(s)$ means ``$s$ is an business major,'' \\
+        $C(s)$ means ``$s$ is a computer science
+        major,'' and \\
+        $M(s)$ means ``$s$ is a math major.'' 
+        
+         Use the domain $S = $ the set of
+        all students at Rhodes College.
+        
+        \begin{enumerate}
+                \item There is an business major who is also a math major.
+                \item Every computer science major is also an business major.
+                \item No computer science majors also major in business.
+                \item Some people majoring in CS are also majoring in math.
+                \item Some computer science majors are business majors as well, but some are not.  (Think carefully; this is tricky.)
+        \end{enumerate}
+        
+
+
+\end{enumerate}
+
+\end{document}
