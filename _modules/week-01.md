@@ -31,3 +31,13 @@ Wed, Sep 6
 
 Fri, Sep 8
 : **More conditional worlds and practice**  
+
+Mon, Sep 11
+: **Practice**
+
+Wed, Sep 13
+: **Predicate logic, quantifiers**
+  [Homework 3](homework/hw3.pdf), due Wed, Sep 20 in class.
+
+Fri, Sep 15
+: **Negation of quantified statements**
