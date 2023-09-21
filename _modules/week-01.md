@@ -41,3 +41,13 @@ Wed, Sep 13
 
 Fri, Sep 15
 : **Negation of quantified statements**
+
+Mon, Sep 18
+: **Multiple quantifiers**
+
+Wed, Sep 20
+: **Rules of inference with quantifiers**  
+  [Homework 4](homework/hw4.pdf), due Wed, Sep 27 in class.
+
+Fri, Sep 22
+: **Proofs with quantifiers**
