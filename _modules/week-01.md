@@ -56,11 +56,13 @@ Mon, Sep 25
 : **Practice**
 
 Wed, Sep 27
-: **The language of proofs, even and odd**
+: **The language of proofs, even and odd**  
+  [Handout]() (sum of two evens is even)
 
 Fri, Sep 29
 : **More even and odd**  
-  [Homework 4](homework/hw4.pdf), due Fri, Oct 6 in class.
+  [Handout]() (if $$x$$ is even, then $$x+5$$ is odd)
+  [Homework 4](homework/hw5.pdf), due Fri, Oct 6 in class.
 
 Mon, Oct 2
 : **Rational and divides**  
