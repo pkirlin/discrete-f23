@@ -51,3 +51,15 @@ Wed, Sep 20
 
 Fri, Sep 22
 : **Proofs with quantifiers**
+
+Mon, Sep 25
+: **Practice**
+
+Wed, Sep 27
+: **The language of proofs, even and odd**
+
+Fri, Sep 29
+: **More even and odd**
+
+Mon, Oct 2
+: **Rational and divides**
