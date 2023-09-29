@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,fullpage,amssymb}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\textbf{Prove that if $x$ is even, then $x+5$ is odd.}
+\\
+
+Restatement in symbols: $\forall x \in \Z^{\textrm{even}} \ \textrm{Odd}(x+5)$.
+\\
+
+Proof: \hfill \textit{[Label where your proof starts.]} \\
+
+Let $x$ be an arbitrary even integer. \hfill \textit{[This is a prose form of universal instantiation.]}\\
+
+By the definition of even, there exists an integer $k$ such that $x=2k$.
+\\ \phantom{.} \hfill \textit{[We know $x$ is even, so we invoke the definition of even.]}\\
+
+By algebra, $x+5$ = $2k+5 = 2k+4 +1 = 2(k+2)+1$. \\ \phantom{.} \hfill \textit{[We are trying to make $x+5$ look like 2$\cdot$(an integer)+1]}.\\
+
+Let $m=k+2$.  $m \in \Z$ by the closure of the integers under addition. \hfill \textit{[Must show that this is an integer.]}\\
+
+$x+5=2m+1$, and therefore $x+5$ is therefore odd by the definition of odd. \\
+
+\textit{[We have shown what we wanted to prove, that $x+5$ is even, so we may stop here.  Some people would continue with the following:]}\\
+
+Because $x$ was chosen arbitrarily, we know $\forall x \in \Z^{\textrm{even}} \ \textrm{Odd}(x+5)$. \\
+
+\textit{[The statement above is a prose form of universal generalization.]}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}} \\
+
+
+
+Alternative restatement in symbols: $\forall x \in \Z \ \textrm{Even}(x)  \to \textrm{Odd}(x+5)$.
+\\
+
+Proof: \hfill \textit{[Label where your proof starts.]} \\
+
+Let $x$  be an arbitrary integer. \hfill \textit{[This is a prose form of universal instantiation.]}\\
+
+Assume $x$ is even. \hfill \textit{[This is a prose form of opening a conditional world.]}\\
+
+By the definition of even, there exists an integer $k$ such that $x=2k$.
+\\ \phantom{.} \hfill \textit{[We know $x$ is even, so we invoke the definition of even.]}\\
+
+By algebra, $x+5$ = $2k+5 = 2k+4 +1 = 2(k+2)+1$. \\ \phantom{.} \hfill \textit{[We are trying to make $x+5$ look like 2$\cdot$(an integer)+1]}.\\
+
+Let $m=k+2$.  $m \in \Z$ by the closure of the integers under addition. \hfill \textit{[Must show that this is an integer.]}\\
+
+$x+5=2m+1$, and therefore $x+5$ is therefore odd by the definition of odd. \\
+
+\textit{[As in the first example, we have shown what we wanted to prove, that $x+5$ is odd, so we may stop here.  Some people would continue with 
+language describing the closing of the conditional world, and the universal generalization.]}\\
+
+\end{document}

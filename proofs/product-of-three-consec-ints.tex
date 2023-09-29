@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage{amsmath,fullpage,amssymb}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\textbf{Prove that the product of any three consecutive integers is divisible by 3.}
+\\
+
+Restatement in symbols: $\forall n \in \Z \ \ 3 \mid n(n+1)(n+2)$.
+\\
+
+\textbf{Proof:} \\
+
+Suppose $n$ is an arbitrary integer. \\
+
+By the quotient-remainder theorem, there exists an integer $q$ such that $n=3q$ or $n=3q+1$ or $n=3q+2$.  \\
+
+
+\textbf{Case 1:} Assume $n=3q$.  \\
+
+\ \ \ $n(n+1)(n+2) = 3q(3q+1)(3q+2) = 3\left[ q(3q+1)(3q+2) \right]$ \ \ by algebra. \\
+
+\ \ \ Let $k=q(3q+1)(3q+2)$.  $k$ is an integer by closure of the integers under multiplication and addition. \\
+
+\ \ \ Therefore, $n(n+1)(n+2) = 3k$, \\ 
+
+\ \ \ and therefore, $3 \mid n(n+1)(n+2)$ by the definition of divides.\\
+
+\textbf{Case 2:} Assume $n=3q+1$.  \\
+
+\ \ \ $n(n+1)(n+2) = (3q+1)(3q+2)(3q+3) = (3q+1)(3q+2)(3(q+1)) = 3\left[ (3q+1)(3q+2)(q+1) \right]$ \ \ by algebra. \\
+
+\ \ \ Let $k=(3q+1)(3q+2)(q+1)$.  $k$ is an integer by closure of the integers under multiplication and addition. \\
+
+\ \ \ Therefore, $n(n+1)(n+2) = 3k$, \\ 
+
+\ \ \ and therefore, $3 \mid n(n+1)(n+2)$ by the definition of divides.\\
+
+
+\textbf{Case 3:} Assume $n=3q+2$.  \\
+
+\ \ \ $n(n+1)(n+2) = (3q+2)(3q+3)(3q+4) = (3q+2)(3(q+1))(3q+4)= 3\left[ (3q+2)(q+1)(3q+4) \right]$ \ \ by algebra. \\
+
+\ \ \ Let $k=(3q+2)(q+1)(3q+4)$.  $k$ is an integer by closure of the integers under multiplication and addition. \\
+
+\ \ \ Therefore, $n(n+1)(n+2) = 3k$, \\ 
+
+\ \ \ and therefore, $3 \mid n(n+1)(n+2)$ by the definition of divides.\\
+
+
+
+Because one of Cases 1, 2, and 3 must apply by the QRT, we can conclude that $n(n+1)(n+2)$ is divisible by 3.
+
+
+
+\end{document}

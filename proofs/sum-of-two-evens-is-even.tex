@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,fullpage,amssymb}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\textbf{Prove that the sum of two even integers is even.}
+\\
+
+Restatement in symbols: $\forall x,y \in \Z^{\textrm{even}} \ \textrm{Even}(x+y)$.
+\\
+
+Proof: \hfill \textit{[Label where your proof starts.]} \\
+
+Let $x$ and $y$ be arbitrary even integers. \hfill \textit{[This is a prose form of universal instantiation.]}\\
+
+By the definition of even, there exist integers $k$ and $p$ such that $x=2k$ and $y=2p$.\\
+
+ \textit{[We know $x$ and $y$ are even, so we invoke the definition of even.  Notice that because the definition of even involves an existential quantifier,
+we had to pick two different variable names.]}\\
+
+By algebra, $x+y$ = $2k+2p = 2(k+p)$. \hfill \textit{[We are trying to make $x+y$ look like 2$\cdot$(an integer)]}.\\
+
+Let $m=k+p$.  $m \in \Z$ by the closure of the integers under addition. \hfill \textit{[Must show that this is an integer.]}\\
+
+$x+y=2m$, and therefore $x+y$ is therefore even by the definition of even. \\
+
+\textit{[We have shown what we wanted to prove, that $x+y$ is even, so we may stop here.  Some people would continue with the following:]}\\
+
+Because $x$ and $y$ were chosen arbitrarily, we know $\forall x,y \in \Z^{\textrm{even}} \ \textrm{Even}(x+y)$. \\
+
+\textit{[The statement above is a prose form of universal generalization.]}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}} \\
+
+
+
+Alternative restatement in symbols: $\forall x,y \in \Z \ (\textrm{Even}(x) \land \textrm{Even}(y)) \to \textrm{Even}(x+y)$.
+\\
+
+Proof: \hfill \textit{[Label where your proof starts.]} \\
+
+Let $x$ and $y$ be arbitrary integers. \hfill \textit{[This is a prose form of universal instantiation.]}\\
+
+Assume $x$ and $y$ are even. \hfill \textit{[This is a prose form of opening a conditional world.]}\\
+
+By the definition of even, there exist integers $k$ and $p$ such that $x=2k$ and $y=2p$.\\
+
+ \textit{[We know $x$ and $y$ are even, so we invoke the definition of even.  Notice that because the definition of even involves an existential quantifier,
+we had to pick two different variable names.]}\\
+
+By algebra, $x+y$ = $2k+2p = 2(k+p)$. \hfill \textit{[We are trying to make $x+y$ look like 2$\cdot$(an integer)]}.\\
+
+$k+p \in \Z$ by the closure of the integers under addition. \hfill \textit{[Must show that this is an integer.]}\\
+
+$x+y$ is therefore even by the definition of even.\\
+
+\textit{[As in the first example, we have shown what we wanted to prove, that $x+y$ is even, so we may stop here.  Some people would continue with 
+language describing the closing of the conditional world, and the universal generalization.]}\\
+
+\end{document}

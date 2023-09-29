@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage{amsmath,fullpage,amssymb}
+
+\newcommand{\nott}{{\sim}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\textbf{Prove that the square of any odd integer has the form $8m+1$ for some integer $m$.}
+\\
+
+Restatement in symbols: $\forall n \in \Z^{\text{odd}} \ \exists m \in \Z \ x^2=8m+1$.
+\\
+
+\textbf{Proof:} \\
+
+Suppose $n$ is an arbitrary odd integer. \\
+
+By the definition of odd, there exists an integer $k$ such that $n=2k+1$.\\
+
+ \textit{[Normally, we'd now write something like $n^2 = (2k+1)^2 = 4k^2+4k+1$, but the problem is that we need
+ to write $n^2$ as $8\cdot(\text{integer})+1$, but we only have 4s in our equation, not 8s.  So we use the quotient-remainder
+ theorem.]}\\
+
+By the quotient-remainder theorem, there exists an integer $q$ such that $k=2q$ or $k=2q+1$.\\
+
+\textit{[We have used the QRT on $k$ with $d=2$ to learn that there must exist an integer $r$ such that $k=2q+r$ and $0 \leq r < 2$,
+which means $r$ can only be 0 or 1.  Note how the book does this differently: they use the QRT on $\textbf{n}$, not $k$, and use
+$d=4$, not $d=2$.  Either way works, but I like this way better because the book glosses over showing that $4q$ and $4q+2$ cannot
+be odd.]} \\
+
+\textbf{Case 1:} Assume $k=2q$. 
+\begin{align*} 
+	n^2 = (2k+1)^2 &= 4k^2+4k+1 & \text{by algebra} \\
+	&= 4(2q)^2 + 4(2q) +1 &\text{by substitution} \\
+	&= 16q^2 + 8q +1 &\text{by algebra} \\
+	&= 8(2q^2 +q)+1&\text{by algebra}
+\end{align*}
+\ \ \ Let $m=2q^2+q$.  $m$ is an integer by closure of the integers under multiplication and addition. \\
+
+\ \ \ Therefore, $n^2=8m+1$ for some integer $m$.\\
+
+\textbf{Case 2:} Assume $k=2q+1$. 
+\begin{align*} 
+	n^2 = (2k+1)^2 &= 4k^2+4k+1 & \text{by algebra} \\
+	&= 4(2q+1)^2 + 4(2q+1) +1 &\text{by substitution} \\
+	&= 4(4q^2 + 4q + 1) + (8q+4) +1 &\text{by algebra} \\
+	&= (16q^2 + 16q + 4) + (8q+4) +1 &\text{by algebra} \\
+	&= 16q^2 + 24q + 8 +1 &\text{by algebra} \\
+	&= 8(2q^2 + 3q + 1)+1&\text{by algebra}
+\end{align*}
+\ \ \ Let $m=2q^2+3q+1$.  $m$ is an integer by closure of the integers under multiplication and addition. \\
+
+\ \ \ Therefore, $n^2=8m+1$ for some integer $m$.\\
+
+Because one of Cases 1 and 2 must apply by the QRT, we can conclude that $n^2 = 8m+1$ for some integer $m$.
+
+
+
+\end{document}

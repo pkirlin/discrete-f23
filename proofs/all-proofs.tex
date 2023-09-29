@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{amsmath,fullpage,amssymb,parskip,etoolbox}
+
+\newcommand{\nott}{{\sim}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\pset}[1]{\mathcal P \left({#1}\right)}
+\newcommand{\indentpar}{\addtolength{\leftskip}{5mm}}
+\newcommand{\stopindentpar}{\addtolength{\leftskip}{-5mm}}
+\newcommand{\tautology}{\textbf{t}}
+\newcommand{\contradiction}{\textbf{c}}
+
+\setlength{\parindent}{0em}
+
+\newtoggle{sol}
+\newtoggle{notes}
+
+\toggletrue{sol}
+\togglefalse{notes}
+
+\iftoggle{notes}{
+	\newcommand{\proofnote}[1]{[\textit{Note: #1}]}
+}{
+	\newcommand{\proofnote}[1]{}
+}
+
+\begin{document}
+
+\section{Chapter 4: Number Theory}
+
+
+
+\subsection{Even and Odd}
+
+The sum of any two even integers is even.
+
+The product of any two even integers is even.
+
+\subsection{Rational}
+
+\subsection{Divisibility}
+
+\subsection{Quotient-Remainder Theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The square of any integer can be written as $3s$ or $3s+1$ for some integer $s$.
+
+\iftoggle{sol}{
+
+In symbols: $\forall n \in \Z \ \exists s \in \Z \ (n^2 = 3s) \lor (n^2=3s+1)$
+
+\textbf{Proof:}
+
+Suppose $n$ is an arbitrary integer.
+
+\proofnote{We must show that we can write $n^2$ as either $3(\textrm{int})$ or $3(\textrm{int})+1$.  However, we don't
+have any information about $n$ other than being an integer, so we're stuck.  We will use the QRT to get unstuck.}
+
+By the quotient-remainder theorem, there exists an integer $q$ such that $n=3q$ or $n=3q+1$ or $n=3q+2$.
+
+Case 1: Assume $n=3q$. 
+\begin{align*}
+n^2 &= (3q)^2 & \text{by substitution} \\
+&= 3(3q^2) & \text{by algebra}
+\end{align*}
+\indentpar
+Let $s =3q^2$.  $s$ is an integer by closure of the integers under multiplication and addition.
+
+Therefore, $n^2=3s$.
+
+\stopindentpar
+
+Case 2: Assume $n=3q+1$.
+\begin{align*}
+n^2 &= (3q+1)^2 & \text{by substitution} \\
+&= 9q^2 + 6q + 1 & \text{by algebra}\\
+&= 3(3q^2 +2q) + 1 & \text{by algebra}
+\end{align*}
+\indentpar
+Let $s =3q^2+2q$.  $s$ is an integer by closure of the integers under multiplication and addition.
+
+Therefore, $n^2=3s+1$.
+
+\stopindentpar
+
+Case 3: Assume $n=3q+2$.
+\begin{align*}
+n^2 &= (3q+2)^2 & \text{by substitution} \\
+&= 9q^2 + 12q + 4 & \text{by algebra}\\
+&= 9q^2 + 12q + 3+1 & \text{by algebra}\\
+&= 3(3q^2 +4q+1) + 1 & \text{by algebra}
+\end{align*}
+\indentpar
+Let $s =3q^2+4q+1$.  $s$ is an integer by closure of the integers under multiplication and addition.
+
+Therefore, $n^2=3s+1$.
+
+\stopindentpar
+
+The QRT tells us that one of these three cases must apply, and in each case, we have proved that $n^2=3s$ or $n^2=3s+1$
+for some integer $s$.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\subsection{Proof by Contradiction and Contraposition}
+
+
+\end{document}

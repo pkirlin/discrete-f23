@@ -1,0 +1,207 @@
+\documentclass[10pt, letterpaper]{article}
+\usepackage{amsmath,fullpage,graphicx,amssymb}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\nott}{{\sim}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\pset}[1]{\mathcal P \left({#1}\right)}
+\newcommand{\indentpar}{\addtolength{\leftskip}{5mm}}
+\newcommand{\stopindentpar}{\addtolength{\leftskip}{-5mm}}
+\newcommand{\proofnote}[1]{[\textit{Note: #1}]}
+\newcommand{\tautology}{\textbf{t}}
+\newcommand{\contradiction}{\textbf{c}}
+
+\begin{document}
+
+\begin{enumerate}
+
+\newpage
+\item easy-med
+
+\begin{tabular}[t]{ll}
+P1 & $p \lor q$ \\
+P2 & $\nott (\nott r \land q)$ \\
+P3 & $\nott p \lor r$ \\ \hline
+Prove: & $r$
+\end{tabular}
+
+\textbf{Solution A:}
+
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $r \lor \nott q$ & DeMorgan's law & P2 \\ \hline
+2 & $q \to r$ & Definition of implication & 1 \\ \hline
+3 & $p \to r$ & Definition of implication & P3 \\ \hline
+4 & $r$ & Dilemma & P1, 2, 3 \\ \hline
+\end{tabular}
+
+\textbf{Solution B:}   
+     
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $\ \vline \ \nott r  $& Assume & --- \\ \hline
+2 & $\ \vline \ \nott p$ & Disjunctive syllogism & P3, 1 \\ \hline
+3 & $\ \vline \ q$ & Disjunctive syllogism & P1, 2 \\ \hline
+4 & $\ \vline \ r \lor \nott q$ & DeMorgan's law & P2 \\ \hline
+5 & $\ \vline \ r$ & Disjunctive syllogism & 3, 4 \\ \hline
+6 & $\ \vline \ r \land \nott r$ & Conjunctive addition & 4, 5 \\ \hline
+7 & $r$ & Closing cond world with contra & 1--6 \\ \hline
+\end{tabular}
+ 
+\newpage
+\item medium
+
+\begin{tabular}[t]{ll}
+P1 & $\nott b \to \nott d$ \\
+P2 & $\nott b \to e$ \\
+P3 & $(\nott b \to (\nott d \land e)) \to d$ \\ \hline
+Prove: & $b$
+\end{tabular}
+
+\textbf{Solution:}   
+
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $\ \vline \ \nott b  $& Assume & --- \\ \hline
+2 & $\ \vline \ \nott d$ & Modus ponens & P1, 1 \\ \hline
+3 & $\ \vline \ e$ & Modus ponens & P2, 1 \\ \hline
+4 & $\ \vline \ \nott( \nott b \to (\nott d \land e))$ & Modus tollens & P3, 2 \\ \hline
+5 & $\ \vline \ \nott( b \lor (\nott d \land e))$ & Definition of implication & 4 \\ \hline
+6 & $\ \vline \ \nott b \land \nott (\nott d \land e))$ & DeMorgan's law & 5 \\ \hline
+7 & $\ \vline \ \nott (\nott d \land e))$ & Conjunctive simplification & 6 \\ \hline
+8 & $\ \vline \ d \lor \nott e$ & DeMorgan's law & 7 \\ \hline
+9 & $\ \vline \ \nott e$ & Disjunctive syllogism & 2, 8 \\ \hline
+10& $\ \vline \ e\land \nott e$ & Conjunctive addition & 3, 9 \\ \hline
+11& $b$ & Closing cond world with contra & 1--10 \\ \hline
+\end{tabular}
+
+\newpage
+\item medium
+
+\begin{tabular}[t]{ll}
+P1 & $(p \to q) \land (r \to s)$ \\
+P2 & $v$ \\
+P3 & $(s \land q) \to \nott v$ \\ \hline
+Prove: & $\nott p \lor \nott r$
+\end{tabular}
+
+\textbf{Solution A:}
+                
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $p \to q$ & Conjunctive simplification & P1 \\ \hline
+2 & $r \to s$ & Conjunctive simplification & P2 \\ \hline
+3 & $\nott (s \land q)$ & Modus tollens & P2, P3 \\ \hline
+4 & $\nott s \lor \nott q$ & DeMorgan's law & 3 \\ \hline
+5 & $q \to \nott s$ & Definition of implication & 4 \\ \hline
+6 & $p \to \nott s$ & Hypothetical syllogism & 1, 5 \\ \hline
+7 & $\nott s \to \nott r$ & Contrapositive & 2 \\ \hline
+8 & $p \to \nott  r$ & Hypothetical syllogism & 6, 7 \\ \hline
+9 & $\nott p \lor \nott  r$ & Definition of implication & 8 \\ \hline
+\end{tabular}
+                
+\textbf{Solution B:}
+                
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $p \to q$ & Conjunctive simplification & P1 \\ \hline
+2 & $r \to s$ & Conjunctive simplification & P2 \\ \hline
+3 & $\nott (s \land q)$ & Modus tollens & P2, P3 \\ \hline
+4 & $\ \vline \ p \land r $& Assume & --- \\ \hline
+5 & $\ \vline \ p$ & Conjunctive simplification &4 \\ \hline
+6 & $\ \vline \ r$ & Conjunctive simplification &4 \\ \hline
+7 & $\ \vline \ q$ & Modus ponens & 1, 5 \\ \hline
+8 & $\ \vline \ s$ & Modus ponens & 2, 6 \\ \hline
+9 & $\ \vline \ s \land q$ & Conjunctive addition & 7, 8 \\ \hline
+10& $\ \vline \ (s \land q) \land \nott (s \land q)$ & Conjunctive addition & 9, 3 \\ \hline
+11& $\nott (p \land r)$ & Closing cond world with contra & 4--10  \\ \hline
+12& $\nott p \lor \nott r$ & DeMorgan's law & 11  \\ \hline
+\end{tabular}
+
+\textbf{Solution C:}
+                
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & $p \to q$ & Conjunctive simplification & P1 \\ \hline
+2 & $r \to s$ & Conjunctive simplification & P2 \\ \hline
+3 & $\nott (s \land q)$ & Modus tollens & P2, P3 \\ \hline
+4 & $\ \vline \ p  $& Assume & --- \\ \hline
+5 & $\ \vline \ q$ & Modus ponens & 1, 4 \\ \hline
+6 & $\ \vline \ \nott s \lor \nott q$ & DeMorgan's law & 3 \\ \hline
+7 & $\ \vline \ \nott s$ & Disjunctive syllogism & 5, 6\\ \hline
+8 & $\ \vline \ \nott r$ & Modus tollens & 2, 7\\ \hline
+9& $p \to \nott r$ & Closing cond world without contra & 4--9  \\ \hline
+10& $\nott p \lor \nott r$ & Definition of implication & 9  \\ \hline
+\end{tabular}
+
+\newpage
+\item medium+
+
+\begin{tabular}[t]{ll}
+P1 & $p \to q$ \\
+P2 & $\nott q \lor r$ \\
+P3 & $s \lor (v \land \nott r)$ \\ \hline
+Prove: & $\nott s \to \nott (p \lor \nott v)$
+\end{tabular}
+                
+\textbf{Solution:}
+
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & \ \vline \ $\nott s$ & Assume & ---\\ \hline
+2 & \ \vline \ $v \land \nott r$ & Disjunctive syllogism & P3, 1\\ \hline
+3 & \ \vline \ $v $ & Conjunctive simplification & 2\\ \hline
+4 & \ \vline \ $\nott r$ & Conjunctive simplification & 2\\ \hline
+5 & \ \vline \ $\nott q$ & Disjunctive syllogism & P2, 4\\ \hline
+6 & \ \vline \ $\nott p$ & Modus tollens & P1, 5\\ \hline
+7 & \ \vline \ $\nott p \land v$ & Conjunctive addition & 6, 3\\ \hline
+8 & \ \vline \ $\nott (p \lor \nott v)$ & DeMorgan's law & 7\\ \hline
+9 & $\nott s \to \nott (p \lor \nott v)$ & Closing cond world without contra & 1--8\\ \hline
+\end{tabular}
+
+\newpage
+\item medium
+
+\begin{tabular}[t]{ll}
+P1 & $a \land \nott d$ \\
+P2 & $b \to (e \to d)$ \\ \hline
+Prove: & $(a \to b) \to \nott e$
+\end{tabular}
+
+\textbf{Solution A:}
+
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+1 & \ \vline \ $a \to b$ & Assume & ---\\ \hline
+2 & \ \vline \ $a$ & Conjunctive simplification & P1\\ \hline
+3 & \ \vline \ $\nott d$ & Conjunctive simplification & P1\\ \hline
+4 & \ \vline \ $b$ & Modus ponens & 1, 2\\ \hline
+5 & \ \vline \ $e \to d$ & Modus ponens & P2, 4\\ \hline
+6 & \ \vline \ $\nott e$ & Modus tollens & 3, 5\\ \hline
+7 & $(a \to b) \to \nott e$ & Closing cond world without contra & 1--5 \\ \hline
+\end{tabular}
+
+\textbf{Solution B:}
+
+\begin{tabular}{|r|l|l|l|} \hline
+Line & Statement & Rule & Lines Used \\ \hline
+2 & $a$ & Conjunctive simplification & P1\\ \hline
+3 & $\nott d$ & Conjunctive simplification & P1\\ \hline
+4 & $\nott b \lor (e \to d)$ & DeMorgan's law & P2\\ \hline
+5 & $\nott b \lor (\nott e \lor d)$ & DeMorgan's law & 4\\ \hline
+6 & $(\nott b \lor \nott e) \lor d$ & Associative law & 5\\ \hline
+7 & $\nott b \lor \nott e $ & Disjunctive syllogism & 3, 6\\ \hline
+8 & $a \lor \nott e $ & Disjunctive addition & 2\\ \hline
+9 & $(a \lor \nott e) \land (\nott b \lor \nott e) $ & Conjunctive addition & 7, 8\\ \hline
+10& $(a \land \nott b) \lor \nott e$ & Distributive law & 9 \\ \hline
+11& $\nott (a \land \nott b) \to \nott e$ & Definition of implication & 10 \\ \hline
+12& $(\nott a \lor b) \to \nott e$ & DeMorgan's law& 11 \\ \hline
+13& $(a \to b) \to \nott e$ & Definition of implication& 12 \\ \hline
+\end{tabular}
+
+\end{enumerate}
+                
+\end{document}
