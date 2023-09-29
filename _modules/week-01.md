@@ -59,7 +59,8 @@ Wed, Sep 27
 : **The language of proofs, even and odd**
 
 Fri, Sep 29
-: **More even and odd**
+: **More even and odd**  
+  [Homework 4](homework/hw4.pdf), due Fri, Oct 6 in class.
 
 Mon, Oct 2
-: **Rational and divides**
+: **Rational and divides**  
