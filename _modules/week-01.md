@@ -12,8 +12,8 @@ Fri, Aug 25
 
 Mon, Aug 28
 : **Conditional statements**  
-  **Reading**{: .label .label-reading } Epp 2.2  
-  **Homework**{: .label .label-hw } [Homework 1](homework/hw1.pdf), due Wed, Sep 6 in class.
+: **Reading**{: .label .label-reading } Epp 2.2  
+: **Homework**{: .label .label-hw } [Homework 1](homework/hw1.pdf), due Wed, Sep 6 in class.
   
 Wed, Aug 30
 : **Valid and invalid arguments**  
@@ -27,7 +27,7 @@ Mon, Sep 4
 
 Wed, Sep 6
 : **Conditional worlds**  
-  [Homework 2](homework/hw2.pdf), due Wed, Sep 13 in class.
+: **Homework**{: .label .label-hw } [Homework 2](homework/hw2.pdf), due Wed, Sep 13 in class.
 
 Fri, Sep 8
 : **More conditional worlds and practice**  
