@@ -13,7 +13,7 @@ Fri, Aug 25
 Mon, Aug 28
 : **Conditional statements**  
   **Reading**{: .label .label-reading } Epp 2.2  
-  [Homework 1](homework/hw1.pdf), due Wed, Sep 6 in class.
+  **Homework**{: .label .label-hw } [Homework 1](homework/hw1.pdf), due Wed, Sep 6 in class.
   
 Wed, Aug 30
 : **Valid and invalid arguments**  
