@@ -12,12 +12,12 @@ Fri, Aug 25
 
 Mon, Aug 28
 : **Conditional statements**  
-  Read Section 2.2  
+  **Reading**{: .label .label-reading } Epp 2.2  
   [Homework 1](homework/hw1.pdf), due Wed, Sep 6 in class.
   
 Wed, Aug 30
 : **Valid and invalid arguments**  
-  Read Section 2.3
+  **Reading**{: .label .label-reading } Epp 2.3  
   
 Fri, Sep 1
 : **Proving valid arguments**  
@@ -37,16 +37,20 @@ Mon, Sep 11
 
 Wed, Sep 13
 : **Predicate logic, quantifiers**  
+  **Reading**{: .label .label-reading } Epp 3.1  
   [Homework 3](homework/hw3.pdf), due Wed, Sep 20 in class.
 
 Fri, Sep 15
 : **Negation of quantified statements**
+  **Reading**{: .label .label-reading } Epp 3.2  
 
 Mon, Sep 18
 : **Multiple quantifiers**
+  **Reading**{: .label .label-reading } Epp 3.3  
 
 Wed, Sep 20
 : **Rules of inference with quantifiers**  
+  **Reading**{: .label .label-reading } Epp 3.4  
   [Homework 4](homework/hw4.pdf), due Wed, Sep 27 in class.
 
 Fri, Sep 22
