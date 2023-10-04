@@ -66,3 +66,49 @@ Fri, Sep 29
 
 Mon, Oct 2
 : **Rational and divides**  
+
+Wed, Oct 4
+: **Divides, quotient-remainder theorem**  
+
+Fri, Oct 6
+: **Proof by contradiction**  
+
+Mon, Oct 9
+: **Chapter 4 wrapup/review**  
+
+Tue, Oct 10
+: **Test (evening)**  
+
+Wed, Oct 11
+: **Sequences and summations**  
+
+Fri, Oct 13
+: **Induction I**  
+
+Mon, Oct 16
+: **Fall break**  
+
+Wed, Oct 18
+: **Induction II**  
+
+Fri, Oct 20
+: **Strong induction I**  
+
+Mon, Oct 23
+: **Strong induction II**  
+
+Wed, Oct 25
+: **Induction practice**  
+
+Fri, Oct 27
+: **Sets Is**  
+
+Mon, Oct 30
+: **Sets II: element proofs*  
+
+Wed, Nov 1
+: **Sets III: algebraic proofs**  
+
+Fri, Nov 3
+: **Set practice**  
+
