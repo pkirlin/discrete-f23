@@ -41,11 +41,11 @@ Wed, Sep 13
   [Homework 3](homework/hw3.pdf), due Wed, Sep 20 in class.
 
 Fri, Sep 15
-: **Negation of quantified statements**
+: **Negation of quantified statements**  
   **Reading**{: .label .label-reading } Epp 3.2  
 
 Mon, Sep 18
-: **Multiple quantifiers**
+: **Multiple quantifiers**  
   **Reading**{: .label .label-reading } Epp 3.3  
 
 Wed, Sep 20
