@@ -67,7 +67,7 @@ Wed, Sep 27
 Fri, Sep 29
 : **More even and odd**  
   [Handout](proofs/if-x-is-even-then-xplus5-is-odd.pdf) (if $$x$$ is even, then $$x+5$$ is odd)  
-: **Homework**{: .label .label-hw } [Homework 4](homework/hw5.pdf), due Fri, Oct 6 in class.
+: **Homework**{: .label .label-hw } [Homework 5](homework/hw5.pdf), due Fri, Oct 6 in class.
 
 Mon, Oct 2
 : **Rational and divides**  
@@ -79,7 +79,7 @@ Wed, Oct 4
 
 Fri, Oct 6
 : **Proof by contradiction**  
-  **Reading**{: .label .label-reading } Epp 4.5
+: **Reading**{: .label .label-reading } Epp 4.5
 
 Mon, Oct 9
 : **Chapter 4 wrapup/review**  
@@ -89,22 +89,22 @@ Tue, Oct 10
 
 Wed, Oct 11
 : **Sequences and summations**  
-  **Reading**{: .label .label-reading } Epp 5.1
+: **Reading**{: .label .label-reading } Epp 5.1
 
 Fri, Oct 13
 : **Induction I**  
-  **Reading**{: .label .label-reading } Epp 5.2
+: **Reading**{: .label .label-reading } Epp 5.2
 
 Mon, Oct 16
 : **<i>Fall break</i>**  
 
 Wed, Oct 18
 : **Induction II**  
-  **Reading**{: .label .label-reading } Epp 5.3
+: **Reading**{: .label .label-reading } Epp 5.3
 
 Fri, Oct 20
 : **Strong induction I**  
-  **Reading**{: .label .label-reading } Epp 5.4
+: **Reading**{: .label .label-reading } Epp 5.4
 
 Mon, Oct 23
 : **Strong induction II**  
