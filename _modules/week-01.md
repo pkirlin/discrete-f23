@@ -85,7 +85,7 @@ Mon, Oct 9
 : **Chapter 4 wrapup/review**  
 
 Tue, Oct 10
-: **Test (evening)**  
+: **Midterm I**{: .label .label-exam } 
 
 Wed, Oct 11
 : **Sequences and summations**  
