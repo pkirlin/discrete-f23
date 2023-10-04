@@ -61,6 +61,7 @@ Mon, Sep 25
 
 Wed, Sep 27
 : **The language of proofs, even and odd**  
+  **Reading**{: .label .label-reading } Epp 4.1  
   [Handout](proofs/sum-of-two-evens-is-even.pdf) (sum of two evens is even)
 
 Fri, Sep 29
@@ -70,9 +71,11 @@ Fri, Sep 29
 
 Mon, Oct 2
 : **Rational and divides**  
+  **Reading**{: .label .label-reading } Epp 4.2, 4.3
 
 Wed, Oct 4
 : **Divides, quotient-remainder theorem**  
+  **Reading**{: .label .label-reading } Epp 4.4
 
 Fri, Oct 6
 : **Proof by contradiction**  
