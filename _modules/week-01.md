@@ -111,7 +111,7 @@ Fri, Oct 27
 : **Sets Is**  
 
 Mon, Oct 30
-: **Sets II: element proofs*  
+: **Sets II: element proofs** 
 
 Wed, Nov 1
 : **Sets III: algebraic proofs**  
