@@ -5,7 +5,7 @@ title: ""
 Wed, Aug 23
 : **Introduction**  
   Propositions, truth tables  
-  Read Section 2.1
+  **Reading**{: .label .label-reading } Epp 2.1
 
 Fri, Aug 25
 : **More truth tables**  
