@@ -5,7 +5,7 @@ title: ""
 Wed, Aug 23
 : **Introduction**  
   Propositions, truth tables  
-  **Reading**{: .label .label-reading } Epp 2.1
+: **Reading**{: .label .label-reading } Epp 2.1
 
 Fri, Aug 25
 : **More truth tables**  
@@ -17,7 +17,7 @@ Mon, Aug 28
   
 Wed, Aug 30
 : **Valid and invalid arguments**  
-  **Reading**{: .label .label-reading } Epp 2.3  
+: **Reading**{: .label .label-reading } Epp 2.3  
   
 Fri, Sep 1
 : **Proving valid arguments**  
@@ -37,21 +37,21 @@ Mon, Sep 11
 
 Wed, Sep 13
 : **Predicate logic, quantifiers**  
-  **Reading**{: .label .label-reading } Epp 3.1  
-  [Homework 3](homework/hw3.pdf), due Wed, Sep 20 in class.
+: **Reading**{: .label .label-reading } Epp 3.1  
+: **Homework**{: .label .label-hw } [Homework 3](homework/hw3.pdf), due Wed, Sep 20 in class.
 
 Fri, Sep 15
 : **Negation of quantified statements**  
-  **Reading**{: .label .label-reading } Epp 3.2  
+: **Reading**{: .label .label-reading } Epp 3.2  
 
 Mon, Sep 18
 : **Multiple quantifiers**  
-  **Reading**{: .label .label-reading } Epp 3.3  
+: **Reading**{: .label .label-reading } Epp 3.3  
 
 Wed, Sep 20
 : **Rules of inference with quantifiers**  
   **Reading**{: .label .label-reading } Epp 3.4  
-  [Homework 4](homework/hw4.pdf), due Wed, Sep 27 in class.
+: **Homework**{: .label .label-hw } [Homework 4](homework/hw4.pdf), due Wed, Sep 27 in class.
 
 Fri, Sep 22
 : **Proofs with quantifiers**
@@ -67,7 +67,7 @@ Wed, Sep 27
 Fri, Sep 29
 : **More even and odd**  
   [Handout](proofs/if-x-is-even-then-xplus5-is-odd.pdf) (if $$x$$ is even, then $$x+5$$ is odd)  
-  [Homework 4](homework/hw5.pdf), due Fri, Oct 6 in class.
+: **Homework**{: .label .label-hw } [Homework 4](homework/hw5.pdf), due Fri, Oct 6 in class.
 
 Mon, Oct 2
 : **Rational and divides**  
@@ -108,22 +108,22 @@ Fri, Oct 20
 
 Mon, Oct 23
 : **Strong induction II**  
-  **Reading**{: .label .label-reading } Epp 5.5
+: **Reading**{: .label .label-reading } Epp 5.5
 
 Wed, Oct 25
 : **Induction practice**  
 
 Fri, Oct 27
 : **Sets I**  
-  **Reading**{: .label .label-reading } Epp 6.1
+: **Reading**{: .label .label-reading } Epp 6.1
 
 Mon, Oct 30
 : **Sets II: element proofs**  
-  **Reading**{: .label .label-reading } Epp 6.2
+: **Reading**{: .label .label-reading } Epp 6.2
 
 Wed, Nov 1
 : **Sets III: algebraic proofs**  
-  **Reading**{: .label .label-reading } Epp 6.3
+: **Reading**{: .label .label-reading } Epp 6.3
 
 Fri, Nov 3
 : **Set practice**  
