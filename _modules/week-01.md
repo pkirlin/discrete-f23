@@ -79,6 +79,7 @@ Wed, Oct 4
 
 Fri, Oct 6
 : **Proof by contradiction**  
+  **Reading**{: .label .label-reading } Epp 4.5
 
 Mon, Oct 9
 : **Chapter 4 wrapup/review**  
@@ -88,33 +89,41 @@ Tue, Oct 10
 
 Wed, Oct 11
 : **Sequences and summations**  
+  **Reading**{: .label .label-reading } Epp 5.1
 
 Fri, Oct 13
 : **Induction I**  
+  **Reading**{: .label .label-reading } Epp 5.2
 
 Mon, Oct 16
 : **<i>Fall break</i>**  
 
 Wed, Oct 18
 : **Induction II**  
+  **Reading**{: .label .label-reading } Epp 5.3
 
 Fri, Oct 20
 : **Strong induction I**  
+  **Reading**{: .label .label-reading } Epp 5.4
 
 Mon, Oct 23
 : **Strong induction II**  
+  **Reading**{: .label .label-reading } Epp 5.5
 
 Wed, Oct 25
 : **Induction practice**  
 
 Fri, Oct 27
-: **Sets Is**  
+: **Sets I**  
+  **Reading**{: .label .label-reading } Epp 6.1
 
 Mon, Oct 30
-: **Sets II: element proofs** 
+: **Sets II: element proofs**  
+  **Reading**{: .label .label-reading } Epp 6.2
 
 Wed, Nov 1
 : **Sets III: algebraic proofs**  
+  **Reading**{: .label .label-reading } Epp 6.3
 
 Fri, Nov 3
 : **Set practice**  
