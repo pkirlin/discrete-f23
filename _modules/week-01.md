@@ -86,7 +86,7 @@ Fri, Oct 13
 : **Induction I**  
 
 Mon, Oct 16
-: **Fall break**  
+: **<i>Fall break</i>**  
 
 Wed, Oct 18
 : **Induction II**  
