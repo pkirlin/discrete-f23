@@ -101,6 +101,7 @@ Mon, Oct 16
 Wed, Oct 18
 : **Induction II**  
 : **Reading**{: .label .label-reading } Epp 5.3
+: **Homework**{: .label .label-hw } [Homework 6](homework/hw6.pdf)
 
 Fri, Oct 20
 : **Strong induction I**  
@@ -112,6 +113,7 @@ Mon, Oct 23
 
 Wed, Oct 25
 : **Induction practice**  
+: **Homework**{: .label .label-hw } [Homework 7](homework/hw7.pdf)
 
 Fri, Oct 27
 : **Sets I**  
@@ -123,6 +125,7 @@ Mon, Oct 30
 
 Wed, Nov 1
 : **Set practice**
+: **Homework**{: .label .label-hw } [Homework 8](homework/hw8.pdf)
 
 Fri, Nov 3
 : **Sets III: algebraic proofs**  
@@ -133,6 +136,7 @@ Mon, Nov 6
 
 Wed, Nov 8
 : **Catch-up**  
+: **Homework**{: .label .label-hw } [Homework 9](homework/hw9.pdf)
 
 Fri, Nov 10
 : **Functions introduction**  
@@ -157,10 +161,10 @@ Mon, Nov 20
 : **Reading**{: .label .label-reading } Epp 9.1
 
 Wed, Nov 22
-: **Thanksgiving break**  
+: **<i>Thanksgiving break</i>**  
 
 Fri, Nov 24
-: **Thanksgiving break**  
+: **<i>Thanksgiving break</i>**  
 
 Mon, Nov 27
 : **Multiplication rule**  
