@@ -1,4 +1,4 @@
-\documentclass[11pt, letterpaper]{report}
+\documentclass[12pt, letterpaper]{report}
 \usepackage{amsmath,fullpage,graphicx,amssymb}
 
 \setlength{\parindent}{0em}
@@ -9,7 +9,7 @@
 
 \begin{document}
 
-{\textbf{Discrete Structures, Fall 2017, Homework 8}}
+{\textbf{Discrete Structures, Fall 2023, Homework 8}}
 
 \bigskip
 
@@ -19,7 +19,8 @@ the problems in sequential order, and with all sheets stapled together.
 \bigskip
 
 Prove the following statements by strong induction.  Make sure to follow the form from class:
-explicitly define $P(n)$, label the basis step(s), inductive step, where you define the inductive hypothesis, where you define what you want to prove
+explicitly define $P(n)$, label the base case(s), inductive case/step, where you define the inductive hypothesis, where you define what you want to 
+prove,
 and where you use the inductive hypothesis.  
 \begin{enumerate}
 
@@ -27,21 +28,33 @@ and where you use the inductive hypothesis.
 $$
 a_1 = 3; \ a_2 = 5; \text{ and for all integers }i \geq 3, \ a_i = 4a_{i-1} -3a_{i-2}. 
 $$
-Prove $\forall n \in \Z^{\geq 1} \ a_n = 3^{n-1}+2.$
+\textbf{Prove} $\forall n \in \Z^{\geq 1} \ a_n = 3^{n-1}+2.$
 
 \item Suppose we define a sequence as follows: 
 $$
 b_0 = 3; \ b_1 = 1; \ b_2 = 3; \text{ and for all integers }i \geq 3, \ b_i = b_{i-3} + b_{i-2}  +b_{i-1}. 
 $$
-Prove that every term in the sequence is odd.
+\textbf{Prove} that every term in the sequence is odd.
 
 
 \item Suppose we define a sequence as follows: 
 $$
-c_0 = 2; \ c_1=7; \text{ and for all integers }i \geq 2, \ c_i = 3c_{i-1} -2c_{i-2}. 
+f_1 = 1; \ f_2=1; \text{ and for all integers }i \geq 3, \ f_i = f_{i-1}  + f_{i-2}.
 $$
-Prove $\forall n \in \Z^{\geq 0} \ 5 \mid (c_n - 2)$.
+This is one definition of the Fibonacci sequence, which you will remember from class, and probably COMP 142.  
 
+\textbf{Prove} $\forall n \in \Z^{\geq 6} \ f_n \geq (\sqrt{2})^n$.
+
+Hint: Remember that $\sqrt{2} = 2^{1/2}$.  So therefore $(\sqrt{2})^n = (2^{1/2})^n = (2^{n/2})$. This may help you if you prefer working with a base
+of $2$ rather than $\sqrt{2}$.  But you can do the proof with either base.
+
+Hint 2: Remember $b^{x+y} = b^x \cdot b^y$, and $b^{x-y} = b^x/b^y$, and $b^{xy} = (b^x)^y = (b^y)^x$.
+
+Side note: In class, we proved $f_n < 2^n$.  This proof is similar, except the inequality is reversed, which illustrates that
+the Fibonacci sequence grows exponentially fast, but the base of the exponential is somewhere between $\sqrt{2}$ and $2$.
+(The actual base is the \emph{golden ratio}, which is $\frac{1+\sqrt{5}}{2} \approx 1.618$.)
+
+\item \phantom{} [Optional, 2 points extra credit] \\ In problem 3, why does the proof specify ``6'' in $\forall n \in \Z^{\geq 6}$?
 
 
 

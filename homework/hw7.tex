@@ -8,7 +8,7 @@
 
 \begin{document}
 
-{\textbf{Discrete Structures, Fall 2017, Homework 7}}
+{\textbf{Discrete Structures, Fall 2023, Homework 7}}
 
 \medbreak
 
@@ -26,7 +26,8 @@ Prove each of the following statements using ``regular'' or ``weak'' induction.
 
        \item Prove $\displaystyle \forall n \in \Z^+ \ \prod_{i=1}^n i(i+1) = (n+1)(n!)^2$
 
-Hint: Recall that $n!=n(n-1)(n-2)\cdots2\cdot 1$, with $0!$ defined to be 1.  However, an alternate
+Hint: Recall that $n!$ denotes \emph{the factorial of $n$} or \emph{$n$ factorial}, and is defined as $n!=n(n-1)(n-2)\cdots2\cdot 1$, with $0!$ defined to be 1.  
+However, an alternate
 formula involving recursion is the following:
 $$n! = \begin{cases} 1 &\text{ if } n= 0 \\
 n \cdot (n-1)! &\text{ otherwise}\end{cases}$$
@@ -35,9 +36,13 @@ This recursive definition will be useful during the inductive step.
 \item $\forall n \in \Z^{\geq 0} \ n(n+1)$ is even.
 
 Note: This is the same problem as question 1 on the last homework (prove that the product of any two consecutive integers is even). 
-In homework 7, you did this with the QRT.  On this homework, you should use induction (do not use the QRT here).
+On that homework, you did this with the quotient-remainder theorem.  On this homework, you should use induction (do not use the QRT here).
 
 \item $\forall n \in \Z^{\geq 0} \ \ 5 \mid 7^n - 2^n$.   
+
+Hint: Remember that $7^{k+1} = 7\cdot 7^k$ and $2^{k+1} = 2\cdot 2^k$.  You can complete the inductive step of this 
+proof in two different ways.  The easier way involves manipulating the inductive hypothesis to get either $7^k$ or $2^k$ alone
+on one side of the equals sign, then substituting that into a piece of an equation in the inductive step.
 
 \end{enumerate}
 

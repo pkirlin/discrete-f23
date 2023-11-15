@@ -9,9 +9,11 @@
 
 \newcommand{\powerset}[1]{\mathcal P\left({#1}\right)}
 
+\newcommand{\proofnote}[1]{[\textit{Note: #1}]}
+
 \begin{document}
 
-\textbf{Discrete Structures, Fall 2017, Homework 9}
+\textbf{Discrete Structures, Fall 2023, Homework 9}
 
 \bigskip
 
@@ -22,31 +24,177 @@ the problems in sequential order, and with all sheets stapled together.
 
 	\item Prove the following statement using an \textit{element proof}:
 	
-	For any four sets $A$, $B$, $C$, and $D$, if $C \subseteq (D \cup A)$ and $B \subseteq D^c$, then
+	For any sets $A$, $B$, $C$, and $D$, if $C \subseteq (D \cup A)$ and $B \subseteq D^c$, then
 	$C \cap B \subseteq A$.
 	
 	\item Prove the following statement using an \textit{element proof}:
 	
-	For any three sets $A$, $B$, and $C$, if $A \cap C \subseteq B$, then
-	$(A-B) \cap (C-B) = \emptyset$.
+	For any sets $A$, $B$, and $C$, if $A \subseteq C$ and $B \subseteq C$, then
+	$A \cup B \subseteq C$.
+	
+	Hint: You will need to divide the proof into two cases at some point, like in practice problem 2 below.
+	
+\end{enumerate}
+
+SET PRACTICE PROBLEMS: (\textit{These are not part of the homework; solutions are on the next page.})
+
+\begin{enumerate}
+
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any sets $A$, $B$, and $C$, if $A \subseteq B$ and $B \subseteq C$, then
+	$A \subseteq C$.
 	
 	\item Prove the following statement using an \textit{element proof}:
 	
-	For any three sets $A$, $B$, and $C$, if $A \cup C \subseteq B$, then
-	$C \times A \subseteq B \times B$.
+	For any sets $A$, $B$, and $C$, if $A \subseteq B$, then
+	$(A \cup C) \subseteq (B \cup C)$.
 	
-	\item Prove the following statement using an \textit{algebraic proof}:
+	\item Prove the following statement using an \textit{element proof}:
 	
-	For any two sets $A$ and $B$, $(B \cup (B-A^c))^c = B^c$.
+	For any sets $A$, $B$, $C$, $D$, and $E$, if $A \subseteq (B \cup C)^c$ and $D \subseteq E$, then
+	$(A \cap D) \subseteq (E-B)$.
 	
-	\item Answer the following questions about power sets:
-	
-	\begin{enumerate}
-		\item Define $S = \{x,y,z\}$.  What is $\powerset{S}$?
-		\item What is $\powerset{\emptyset}$?
-		\item What is $\powerset{\powerset{\emptyset}}$?
-	\end{enumerate}
+\end{enumerate}
 
+
+\newpage
+SOLUTIONS TO PRACTICE PROBLEMS:
+
+
+
+\begin{enumerate}
+
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any sets $A$, $B$, and $C$, if $A \subseteq B$ and $B \subseteq C$, then
+	$A \subseteq C$.
+	
+	\textbf{Proof:}
+	
+	Let $A$, $B$, and $C$ be arbitrary sets.
+        
+        Assume $A \subseteq B$ and $B \subseteq C$.
+        
+        \proofnote{We are trying to prove that $A \subseteq C$, so let's assume $x$ is an arbitrary element in the left side of the subset
+        ($A$) and show $x$ must be in the right side ($C$).}
+        
+        Let $x$ be an arbitrary element in $U$.  Assume $x \in A$.  
+        
+        \proofnote{The line above could also be written as ``Let $x$ be an arbitrary element in $A$.''}
+        
+        $x \in A$ \qquad (from above)
+        
+        $x \in B$ \qquad (because $A \subseteq B$ and $x \in A$)
+        
+        $x \in C$ \qquad (because $B \subseteq C$ and $x \in B$)
+        
+                
+        Because we assumed $x$ was an arbitrary element in $A$ and we showed $x \in C$, we can conclude (by the definition of subset)
+        that $A \subseteq C$.
+
+	
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any sets $A$, $B$, and $C$, if $A \subseteq B$, then
+	$(A \cup C) \subseteq (B \cup C)$.
+	
+	\textbf{Proof:}
+	
+	Let $A$, $B$, and $C$ be arbitrary sets.
+        
+        Assume $A \subseteq B$.
+        
+        \proofnote{We are trying to prove that $(A \cup C) \subseteq (B \cup C)$, so let's assume $x$ is an arbitrary element in the left side of the subset
+        ($A \cup C$) and show $x$ must be in the right side ($B \cup C$).}
+        
+        Let $x$ be an arbitrary element in $U$.  Assume $x \in A \cup C$.  
+        
+        \proofnote{The line above could also be written as ``Let $x$ be an arbitrary element in $A \cup C$.''}
+        
+        $x \in A \cup C$ \qquad (from above)
+        
+        $x \in A \lor  x \in C$ \qquad (def of union)
+        
+        \proofnote{Because we don't know if $x \in A$ or if $x \in C$, we will split the proof into cases,
+        one case where we assume $x \in A$ and one where we assume $x \in C$.  We will make sure both cases
+        lead to the same conclusion, that $x \in B \cup C$.  And then we will use the rule of dilemma/proof by
+        division into cases to conclude that whichever side of the ``or'' statement above is true 
+        ($x \in A \lor  x \in C$), since both sides lead to the same conclusion (that $x \in B \cup C$),
+        that the conclusion must be true in general.}
+        
+        \textbf{Case 1:} Assume $x \in A$.
+        
+        \quad $x \in B$ \qquad (because $x\in A$ and $A \subseteq B$)
+        
+        \quad $x \in B \lor x \in C$ \qquad (disjunctive addition)	
+        
+        \quad $x \in B \cup C$ \qquad (def of union)	
+        
+        \textbf{Case 2:} Assume $x \in C$.
+       
+        
+        \quad $x \in B \lor x \in C$ \qquad (disjunctive addition)	
+        
+        \quad $x \in B \cup C$ \qquad (def of union)	
+        
+        Since both cases above lead to the same conclusion, we can conclude that $x \in B \cup C$.
+        
+         Because we assumed $x$ was an arbitrary element in $A \cup C$ and we showed $x \in B \cup C$, we can conclude (by the definition of subset)
+        that $A \cup C \subseteq B \cup C$.
+        
+	\item Prove the following statement using an \textit{element proof}:
+	
+	For any sets $A$, $B$, $C$, $D$, and $E$, if $A \subseteq (B \cup C)^c$ and $D \subseteq E$, then
+	$(A \cap D) \subseteq (E-B)$.
+	
+	\textbf{Proof:}
+	
+	Let $A$, $B$, $C$, $D$, and $E$ be arbitrary sets.
+        
+        Assume $A \subseteq (B \cup C)^c$ and $D \subseteq E$.
+        
+        \proofnote{We are trying to prove that $(A \cap D) \subseteq (E-B)$, so let's assume $x$ is an arbitrary element in the left side of the subset
+        ($A \cap D$) and show $x$ must be in the right side ($E-B$).}
+        
+        Let $x$ be an arbitrary element in $U$.  Assume $x \in A \cap D$.  
+        
+        \proofnote{The line above could also be written as ``Let $x$ be an arbitrary element in $A\cap D$.''}
+
+	$x \in A \cap D$ \qquad (from above)
+        
+    $x \in A \land  x \in D$ \qquad (def of intersection)
+    
+    $x \in A$ \qquad (conjunctive simplification)
+    
+    $x \in D$ \qquad (conjunctive simplification)
+    
+    $x \in (B \cup C)^c$ \qquad (because $x \in A$ and $A \subseteq (B \cup C)^c$)
+    
+    $\nott (x \in (B \cup C))$ \qquad (def of complement)
+    
+    $\nott (x \in B \lor x \in C)$ \qquad (def of union)
+    
+    $\nott (x \in B) \land \nott( x \in C)$ \qquad (deMorgan's law)
+    
+    $\nott (x \in B)$ \qquad (conjunctive simplification)
+    
+    $x \in B^c$ \qquad (def of complement)
+    
+    \proofnote{We also could have turned $x \in (B \cup C)^c$ into $x \in (B^c \cap C^c)$ through the set version of deMorgan's laws, and proceeded from there.  We would still want to get $x \in B^c$.}
+    
+    $x \in E$ \qquad (because $x \in D$ and $D \subseteq E$)
+    
+    $x \in E \land x \in B^c$ \qquad (conjunctive addition)
+    
+    $x \in E \cap B^c$ \qquad (def of intersection)
+    
+    $x \in E - B$ \qquad (def of set difference)
+    
+    Because we assumed $x$ was an arbitrary element in $A \cap D$ and we showed $x \in B -E$, we can conclude (by the definition of subset)
+        that $A \cap D \subseteq E-B$.
+
+	
 \end{enumerate}
 
 \end{document}

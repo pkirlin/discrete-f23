@@ -122,9 +122,62 @@ Mon, Oct 30
 : **Reading**{: .label .label-reading } Epp 6.2
 
 Wed, Nov 1
+: **Set practice**
+
+Fri, Nov 3
 : **Sets III: algebraic proofs**  
 : **Reading**{: .label .label-reading } Epp 6.3
 
-Fri, Nov 3
-: **Set practice**  
+Mon, Nov 6
+: **Set practice problems**  
+
+Wed, Nov 8
+: **Catch-up**  
+
+Fri, Nov 10
+: **Functions introduction**  
+: **Reading**{: .label .label-reading } Epp 7.1
+
+Mon, Nov 13
+: **1-1 and onto**  
+: **Reading**{: .label .label-reading } Epp 7.2
+
+*Tue, Nov 14*
+: **Midterm II**{: .label .label-exam } 
+
+Wed, Nov 15
+: **More 1-1 and onto**  
+
+Fri, Nov 17
+: **Function composition**  
+: **Reading**{: .label .label-reading } Epp 7.3
+
+Mon, Nov 20
+: **Intro to probability and counting**  
+: **Reading**{: .label .label-reading } Epp 9.1
+
+Wed, Nov 22
+: **Thanksgiving break**  
+
+Fri, Nov 24
+: **Thanksgiving break**  
+
+Mon, Nov 27
+: **Multiplication rule**  
+: **Reading**{: .label .label-reading } Epp 9.2
+
+Wed, Nov 29
+: **Addition rule**  
+: **Reading**{: .label .label-reading } Epp 9.3
+
+Fri, Dec 1
+: **Pigeonhole principle**  
+: **Reading**{: .label .label-reading } Epp 9.4
+
+Mon, Dec 4
+: **Combinations**  
+: **Reading**{: .label .label-reading } Epp 9.5
+
+Wed, Dec 6
+: **More combinations**  
 
